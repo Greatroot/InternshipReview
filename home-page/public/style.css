@@ -82,11 +82,15 @@ img {
     color: white;
 }
 
-  .flex-container {
-    display: flex;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
+  .main-footer {
+    background: white;
+    color: black;
+    padding: 40px 5%;
+  }
+
+  .about-us {
+      color: white;
+      font-size: 12px;
   }
   .fa {
     padding: 20px;
@@ -100,14 +104,14 @@ img {
   .fa-instagram {
     background: white;
     color:black;
-    display: block;
+    display: inline-block;
     border-radius: 50%;
   }
   
   .fa-linkedin {
     background: white;
     color:black;
-    display: block;
+    display: inline-block;
     border-radius: 50%;
   }
 
@@ -123,4 +127,16 @@ img {
 .circle.linkedin {
     border-radius: 50%;
     display: block;
+}
+.comp {     /* insert some picture on right and do styling to format it properly*/
+    background-color: white;
+    white-space: pre-wrap;
+}
+.text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.black-comp {
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
