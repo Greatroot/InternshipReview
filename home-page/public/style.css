@@ -37,6 +37,16 @@ mark.yellow {
     background: none;
     position: relative;
 }
+mark.black {
+    color:black;
+    background: none;
+    position: relative;
+}
+mark.red {
+    color:red;
+    background: none;
+    position: relative;
+}
 
 img {
     opacity: 0.80;
