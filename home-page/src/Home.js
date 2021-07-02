@@ -29,7 +29,7 @@ class Home extends React.Component {
                 name = "companyName" 
                 value = {this.state.companyName}
                 onChange = {this.handleChange} />
-                <button type="submit"> <i class="fa fa-search"></i></button>
+                <br />  <br /> 
                 </form>
             </div>  
         )

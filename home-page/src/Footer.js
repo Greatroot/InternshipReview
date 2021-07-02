@@ -4,10 +4,13 @@ function Footer() {
     return (
     <div>
         <footer className="main-footer">
-            <div class="circlelinkedin"><li> <a href = "#"> < i class="fa fa-linkedin"></i> </a></li> </div>
-            <div class="circleinsta"><li> <a href = "#"> < i class="fa fa-instagram"></i> </a></li></div>
+            <div className="content">
+            <div className="linkedin"> <a href = "#"> < i class="fa fa-linkedin"> </i> </a>  </div>
+            <div className="insta"> <a href = "#"> < i class="fa fa-instagram"></i> </a>  </div>
+            <br />
             <div className="about-us"><a href = "#"> About Us </a> </div>
             <div class= "contact-us"><a href = "#"> Contact Us </a> </div>
+            </div>
         </footer>
     </div>
     )
