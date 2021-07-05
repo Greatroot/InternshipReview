@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from './Header/Header';
-import Home from "./Home";
-import Footer from "./Footer";
-import Image from "./Image"
-import WhiteComponent from './WhiteComponent';
-import BlackComponent from './BlackComponent';
+import Home from "./Home/Home";
+import Footer from "./Home/Footer";
+import Image from "./Home/Image"
+import WhiteComponent from './Home/WhiteComponent';
+import BlackComponent from './Home/BlackComponent';
 
 // TODO: Update the social media links once we make actual accounts.
 function App() {
