@@ -26,7 +26,7 @@ class Home extends React.Component {
                 <p> Because interning 
                     is supposed to be fun! </p>
                 <input type = "text"
-                placeholder = "Search for internship companies"
+                placeholder = "Search for an internship company"
                 name = "companyName" 
                 value = {this.state.companyName}
                 onChange = {this.handleChange} />
