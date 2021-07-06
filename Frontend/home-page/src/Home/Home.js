@@ -1,8 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import WhiteComponent from "../WhiteComponent";
-import BlackComponent from "../BlackComponent";
+import WhiteComponent from "./WhiteComponent";
+import BlackComponent from "./BlackComponent";
 import Footer from "../Footer/Footer";
+import Image from "./Image";
 
 class Home extends React.Component {
     constructor() {
@@ -23,6 +24,7 @@ class Home extends React.Component {
     render() {
         return(
             <div>
+                <Image />
                 <form className="searchBar">
                 <p> Because 
                     <mark className="yellow"> interning </mark>
