@@ -7,34 +7,44 @@ import {FaBars, FaTimes} from "react-icons/fa";
 import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 const Header = () => {
-    const [click, setClick] = useState(false); // If false, show hamburger. If true, show 'x' icon.
-    const [button, setButton] = useState(true); // True if hamburger menu is in webapp mode and false
+
+    // TODO: Remove next four lines if we really decide to never use a hamburger menu.
+
+    // const [click, setClick] = useState(false); // If false, show hamburger. If true, show 'x' icon.
+    // const [button, setButton] = useState(true); // True if hamburger menu is in webapp mode and false
                                                 // if hamburger is not in mobile mode.
 
-    const handleClick = () => setClick(!click);     // Toggle click to be true or false
-    const closeMobileMenu = () => setClick(false); // Closes the mobile hamburger menu.
+    // const handleClick = () => setClick(!click);     // Toggle click to be true or false
+    // const closeMobileMenu = () => setClick(false); // Closes the mobile hamburger menu.
 
+
+    //TODO: If I use the showButton function for anything other than the hamburger menu that we're now not doing,
+    // rename this function. It's not needed now, but if we have any functionality that depends on desktop vs.
+    // mobile then I'll want to rename this function and use it for that.
 
     // Calculates whether the screen is in desktop view or in mobile view.
-    const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    }
+    // const showButton = () => {
+    //     if(window.innerWidth <= 960) {
+    //         setButton(false);
+    //     } else {
+    //         setButton(true);
+    //     }
+    // }
 
-    useEffect(() => {
-        // Add an event listener so that everytime the window changes size, we call the
-        // showButton function.
-        window.addEventListener('resize', showButton);
+    //TODO: Remove this if the hamburger menu never gets used and if the hamburger menu was the only feature that
+    // depended on desktop vs. mobile.
 
-        // I put this clean-up func to reduce memory usage/leaks by getting rid of event listener
-        // when we're done with it.
-        return() => {
-            window.removeEventListener('resize', showButton);
-        }
-    }, [])
+    // useEffect(() => {
+    //     // Add an event listener so that everytime the window changes size, we call the
+    //     // showButton function.
+    //     window.addEventListener('resize', showButton);
+    //
+    //     // I put this clean-up func to reduce memory usage/leaks by getting rid of event listener
+    //     // when we're done with it.
+    //     return() => {
+    //         window.removeEventListener('resize', showButton);
+    //     }
+    // }, [])
 
     return (
         // Sacchit's code:
@@ -55,26 +65,17 @@ const Header = () => {
         <>
             <nav className="navbar">
                 <div className="navbar-container container">
-                    <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
+                    <Link to='/' className="navbar-logo">
                         Rate My Internship
                     </Link>
-                    <div className="menu-icon" onClick={handleClick} >
-                        {click ? <FaTimes /> : <FaBars /> }
-                    </div>
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    {/*TODO: Remove if the hamburger menu never gets used*/}
+                    {/*<div className="menu-icon" onClick={handleClick} >*/}
+                    {/*    {click ? <FaTimes /> : <FaBars /> }*/}
+                    {/*</div>*/}
+                    <ul className='nav-menu'>
                         <li className='nav-item'>
-                            <Link to="/add-internship" className='nav-links' onClick={closeMobileMenu}>
+                            <Link to="/add-internship" className='nav-links'>
                                 Rate an Internship
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/instagram" className='nav-links' onClick={closeMobileMenu}>
-                                <AiFillInstagram />
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/linkedin" className='nav-links' onClick={closeMobileMenu}>
-                                <AiFillLinkedin />
                             </Link>
                         </li>
 

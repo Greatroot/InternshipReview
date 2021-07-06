@@ -1,8 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import WhiteComponent from "./WhiteComponent";
-import BlackComponent from "./BlackComponent";
-import Footer from "./Footer";
+import WhiteComponent from "../WhiteComponent";
+import BlackComponent from "../BlackComponent";
+import Footer from "../Footer/Footer";
 
 class Home extends React.Component {
     constructor() {

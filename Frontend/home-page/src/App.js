@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from './Header/Header';
-import Home from "./Home";
-import Footer from "./Footer";
+import Home from "./Home/Home";
+import Footer from "./Footer/Footer";
 import Image from "./Image"
 import WhiteComponent from './WhiteComponent';
 import BlackComponent from './BlackComponent';
