@@ -3,15 +3,16 @@ import React from "react"
 function WhiteComponent() {
     return(
         <div className="comp">
-            <br /> <br /> <br /> <br />  <br /> <br />
+            
             <p className="text">
-            <mark class="black">Applying as well as finalizing on an<br />
-            internship offer is daunting. We are here to<br />
-            make </mark>
-            <mark class="red">interning </mark> 
-            fun by helping you find<br />
-            the perfect internship. </p>
-            <br /> <br /> <br /> <br />  <br /> <br />
+            <div class="design-header">Find the right Internship for you!<br />
+            </div>
+            <div class="horizontal-line">  <hr /></div>
+           <div class="design-para"> With personalized reviews of internship experiences for a variety of companies, you can explore different internship positions and opportunities.</div></p>
+         
+            <div className="design">
+            <img src="DesignHome.jpeg" alt="Home Design"></img>
+            </div>
         </div>
     )
 }

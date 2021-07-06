@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     background-color: black;
@@ -12,7 +11,7 @@ body {
 
 header > h3 {   /* align website name and write a review together */
     font-weight: normal;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Noto Serif Bold;
     position: relative;
     color: white;
     float: right;
@@ -32,18 +31,8 @@ mark.white {
     background: none;
     position: relative;
 }
-mark.yellow {
-    color: yellow;
-    background: none;
-    position: relative;
-}
 mark.black {
     color:black;
-    background: none;
-    position: relative;
-}
-mark.red {
-    color:red;
     background: none;
     position: relative;
 }
@@ -63,16 +52,21 @@ img {
     position: relative;
 }
 .searchBar > input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    border: 3px solid #FFA07A;
+    border-radius: 25px;
+    background-color :#fbe7a6;
+    margin: auto;
+    display: block;
     padding: 10px;
     font-size: 17px;
-    border: 1px solid grey;
-    width: 30%;
-    height: 5%;
-    left: 35%;
+    width: 700px;
+    height: 48px;
+}
+::placeholder  {
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
 }
 
   .main-footer {
@@ -80,18 +74,62 @@ img {
 	padding-top: 10px;
 	width: 100%;
 	box-shadow: 0px 0px 25px rgb(207, 207, 207);
-	height: 120px;
-	color: #9B9B9B;
-	background: #F3F3F3;
-  }
-  .content {
+	height: 200px;
+	color: black;
+	background: #fbd9ad;
+    
     display: block;
 	padding: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	font: 25px Georgia, "Times New Roman", Times, serif;
-	font-size: 14px;
+    
+  } 
+
+  .left-footer {
+    margin-left: 5em;
+    float: left;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+
+  }
+  .left-footer-rmi {
+
+    font-style: normal;
+    font-weight: bold;
+    font-family: Noto Serif;
+    font-size: 30px;
+    line-height: 54px;
+    letter-spacing: -0.05em;
+    color:#000000;
+
+  }
+
+  .right-footer {
+      float: right;
+      margin-right: 5em;
+      font-family: Oxygen;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+    
+  }
+  .right-footer-header {
+    font-style: normal;
+    font-weight: bold;
+    font-family: Noto Serif;
+    font-size:25px;
+  }
+
+  .linkedin {
+    margin-right: 18.5em;
+      float:right;
+      letter-spacing:normal;
+  }
+  
+  .insta {
+      margin-right: 1em;
+      float: right;
+      letter-spacing:normal;
   }
   a {
     color: black;
@@ -100,18 +138,70 @@ img {
 }
   
 .comp {     
-    background-color: white;
-    white-space: pre-wrap;
-    position: relative;
+    height: 600px;
+    background: whitesmoke;
+
 }
 .text{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Oxygen;
     font-size: 30px;
     margin-left:5em;
+    display: inline-block;
 }
-.black-comp {
-    background-color: black;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    position: relative;
+
+.design {
+    position: absolute;
+    width: 600px;
+    height: 413.27px;
+    left: 83px;
+    top: 872px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 3px solid #FFA07A;
+
+}
+
+.design-header {
+    position: absolute;
+width: 591px;
+height: 48px;
+left: 770px;
+top: 930px;
+
+font-family: Noto Serif;
+font-style: normal;
+font-weight: bold;
+font-size: 35px;
+line-height: 48px;
+/* identical to box height */
+color: #000000;
+}
+
+.design-para {
+    position: absolute;
+width: 568px;
+height: 140px;
+left: 745px;
+top: 1050px;
+
+font-family: Oxygen;
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 35px;
+text-align: center;
+display: inline-block;
+
+color: #000000;
+}
+
+.horizontal-line {
+    position: absolute;
+width: 292px;
+height: 0px;
+left: 884px;
+top: 1000px;
+
+border: 2px solid #F4976C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(-0.2deg);
 }
