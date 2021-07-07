@@ -1,11 +1,14 @@
 import React from "react"
 import Search from "./search"
+// import Header from "./Header/Header"
+// import Footer from "./Footer/Footer.js"
 
 function app() {
     return (
-        <div>
-            <br /><br /><br />
+        <div className="form-box">
+        {/* <Header /> */}
         <Search />
+        {/* <Footer />  */}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react"
 
-function WhiteComponent() {
+function DesignComponent() {
     return(
         <div className="comp">
             
@@ -17,4 +17,4 @@ function WhiteComponent() {
     )
 }
 
-export default WhiteComponent
+export default DesignComponent
