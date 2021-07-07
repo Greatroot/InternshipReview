@@ -6,7 +6,7 @@ import Image from "./Image";
 
 class Home extends React.Component {
     constructor() {
-        super()
+        super();
         this.state = {
             companyName: ""
         }
@@ -16,7 +16,7 @@ class Home extends React.Component {
         const {name, value} = event.target
         this.setState({
             [name]: value
-        })
+        });
 
     }
 
@@ -25,14 +25,15 @@ class Home extends React.Component {
             <div>
                 <Image />
                 <form className="searchBar">
-                <p> Because interning
-                    is supposed to be fun! </p>
-                <input type = "text"
-                placeholder = "Search for an internship company"
-                name = "companyName"
-                value = {this.state.companyName}
-                onChange = {this.handleChange} />
-                <br />  <br />
+                    <p> Because interning
+                        is supposed to be fun! </p>
+                    <input type = "text"
+                        placeholder = "Search for an internship company"
+                        name = "companyName"
+                        value = {this.state.companyName}
+                        onChange = {this.handleChange}
+                    />
+                    <br />  <br />
                 </form>
                 <WhiteComponent />
                 <Footer />

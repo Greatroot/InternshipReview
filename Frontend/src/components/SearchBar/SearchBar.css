@@ -1,0 +1,29 @@
+.search-bar {
+    margin-top: 5rem;
+    padding-left: 1rem;
+    display: flex;
+    border: 3px solid #FFA07A;
+    border-radius: 25px;
+    background-color :#fbe7a6;
+    width: 700px;
+    height: 48px;
+    align-items: center;
+}
+
+.search-bar > input {
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 17px;
+    flex: 9;
+    align-self: flex-start;
+
+
+}
+
+.search-icon {
+    font-size: 24px;
+    color: #042A2B;
+    flex: 1;
+}
