@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'react-router-dom'
 import {FaInstagram, FaLinkedin} from "react-icons/fa";
 
-function Footer() {
+function OldFooter() {
     return (
 
         <div className="footer">
@@ -52,4 +52,4 @@ function Footer() {
     // </div>
     )
 }
-export default Footer;
+export default OldFooter;
