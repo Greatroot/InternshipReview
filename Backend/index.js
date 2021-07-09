@@ -78,7 +78,6 @@ app.post('/create', (req, res) => {
     )
 });
 
-app.listen(3001, () => {
-    console.log("server running on port 3001");
+app.listen(process.env.PORT || PORT, () => {
+    console.log("server running on port ${PORT}");
 });
-
