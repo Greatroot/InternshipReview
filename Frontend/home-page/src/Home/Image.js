@@ -3,8 +3,8 @@ import React from "react"
 function Image() {
     return (
      <div>
-        <img 
-        src="https://rscbga.com/wp-content/uploads/2021/04/png-internship-8-png-image-internship-png-1599_533.png" 
+        <img className="home-image"
+        src="https://media.discordapp.net/attachments/860573504611942430/862883085648396308/tgip31_banner_desktop_1920x1080.jpeg?width=1822&height=1025" 
         alt="Problem?"
     />
     <br />  <br /> 
