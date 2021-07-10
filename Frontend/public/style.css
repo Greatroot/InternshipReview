@@ -205,3 +205,46 @@ border: 2px solid #F4976C;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 transform: rotate(-0.2deg);
 }
+
+
+/* Down below is the CSS for what used to be the form-page */
+
+.form-parameters label {
+    margin-left: 17em;
+    font-size: 25px;
+    width: 240px;
+    display: inline-block;
+    text-align: right;
+}
+
+.form-parameters input[type = "text"] {
+    background-color: lightsalmon;
+    color: black;
+    box-sizing: border-box;
+    padding: 6px 6px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.form-parameters input[type = "radio"] {
+    background-color: lightsalmon;
+    color: black;
+    width: 20px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.radio-label {
+    width: 100px;
+    display: inline-block;
+}
+
+input {
+    font-size: 1.5em;
+    color: black;
+}
+.bg {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
