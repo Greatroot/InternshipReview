@@ -42,7 +42,7 @@ img {
     max-width: 100%;
     position: relative;
   }
- 
+
 .searchBar > p {
     font-size: 30px;
     color: white;
@@ -77,11 +77,11 @@ img {
 	height: 200px;
 	color: black;
 	background: #fbd9ad;
-    
+
     display: block;
 	padding: 10px;
-    
-  } 
+
+  }
 
   .left-footer {
     margin-left: 5em;
@@ -111,7 +111,7 @@ img {
         font-style: normal;
         font-weight: normal;
         font-size: 17px;
-    
+
   }
   .right-footer-header {
     font-style: normal;
@@ -125,7 +125,7 @@ img {
       float:right;
       letter-spacing:normal;
   }
-  
+
   .insta {
       margin-right: 1em;
       float: right;
@@ -136,8 +136,8 @@ img {
     text-decoration: none;
     font-size: 15px;
 }
-  
-.comp {     
+
+.comp {
     height: 600px;
     background: whitesmoke;
 
