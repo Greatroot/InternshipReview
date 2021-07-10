@@ -1,24 +1,20 @@
 import React from "react"
 import ReactDOM from "react-dom"
+<<<<<<< HEAD:Frontend/src/pages/Home/Home.js
 import WhiteComponent from "./WhiteComponent";
 import Footer from "./Footer.js";
 import Image from "./Image";
+=======
+import DesignComponent from "./DesignComponent";
+import Footer from "./Footer/Footer.js";
+import Image from "./Image.js"
+>>>>>>> 8a26c7db0ed951d6a1441dcd51341b9ba6681bfe:Frontend/home-page/src/Home/Home.js
 
 class Home extends React.Component {
     constructor() {
-        super();
-        this.state = {
-            companyName: ""
-        }
-        this.handleChange = this.handleChange.bind(this)
-    }
-    handleChange(event) {
-        const {name, value} = event.target
-        this.setState({
-            [name]: value
+
         });
 
-    }
 
     render() {
         return(
@@ -26,16 +22,7 @@ class Home extends React.Component {
                 <Image />
                 <form className="searchBar">
                     <p> Because interning
-                        is supposed to be fun! </p>
-                    <input type = "text"
-                        placeholder = "Search for an internship company"
-                        name = "companyName"
-                        value = {this.state.companyName}
-                        onChange = {this.handleChange}
-                    />
-                    <br />  <br />
-                </form>
-                <WhiteComponent />
+                <DesignComponent />
                 <Footer />
             </div>
         )
