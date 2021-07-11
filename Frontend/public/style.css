@@ -51,17 +51,17 @@
 /*    align-items: center;*/
 /*    position: relative;*/
 /*}*/
-/*.searchBar > input {*/
-/*    border: 3px solid #FFA07A;*/
-/*    border-radius: 25px;*/
-/*    background-color :#fbe7a6;*/
-/*    margin: auto;*/
-/*    display: block;*/
-/*    padding: 10px;*/
-/*    font-size: 17px;*/
-/*    width: 700px;*/
-/*    height: 48px;*/
-/*}*/
+/* .searchBar > input {
+   border: 3px solid #FFA07A;
+   border-radius: 25px;
+   background-color :#fbe7a6;
+   margin: auto;
+   display: block;
+   padding: 10px;
+   font-size: 17px;
+   width: 700px;
+   height: 48px; 
+} */
 /*::placeholder  {*/
 /*    font-family: Noto Serif;*/
 /*    font-style: normal;*/
