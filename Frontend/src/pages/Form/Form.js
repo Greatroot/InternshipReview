@@ -1,5 +1,5 @@
 import React from "react"
-import Search from "./search"
+import Search from "./Search"
 // import Header from "./Header/Header"
 // import Footer from "./Footer/Footer.js"
 

@@ -1,3 +1,256 @@
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*body {*/
+/*    margin: 0;*/
+/*    background-color: #000000;*/
+/*    padding:0;*/
+/*    max-width: 100%;*/
+/*    overflow-x: hidden;*/
+/*}*/
+
+/*header > h3 {   !* align website name and write a review together *!*/
+/*    font-weight: normal;*/
+/*    font-family: Noto Serif Bold;*/
+/*    position: relative;*/
+/*    color: white;*/
+/*    float: right;*/
+/*    display: inline;*/
+/*}*/
+
+/*.rmi {      !* align website name and write a review together *!*/
+/*    color: whitesmoke;*/
+/*    font-family: Georgia, 'Times New Roman', Times, serif;*/
+/*    display: inline;*/
+/*    float: left;*/
+/*    font-size: 150%;*/
+/*    position: relative;*/
+/*}*/
+/*mark.white {*/
+/*    color:white;*/
+/*    background: none;*/
+/*    position: relative;*/
+/*}*/
+/*mark.black {*/
+/*    color:black;*/
+/*    background: none;*/
+/*    position: relative;*/
+/*}*/
+
+/*img {*/
+/*    opacity: 0.80;*/
+/*    max-width: 100%;*/
+/*    position: relative;*/
+/*  }*/
+
+/*.searchBar > p {*/
+/*    font-size: 30px;*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: relative;*/
+/*}*/
+/*.searchBar > input {*/
+/*    border: 3px solid #FFA07A;*/
+/*    border-radius: 25px;*/
+/*    background-color :#fbe7a6;*/
+/*    margin: auto;*/
+/*    display: block;*/
+/*    padding: 10px;*/
+/*    font-size: 17px;*/
+/*    width: 700px;*/
+/*    height: 48px;*/
+/*}*/
+/*::placeholder  {*/
+/*    font-family: Noto Serif;*/
+/*    font-style: normal;*/
+/*    font-weight: bold;*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*  .main-footer {*/
+/*	bottom: 0;*/
+/*	padding-top: 10px;*/
+/*	width: 100%;*/
+/*	box-shadow: 0px 0px 25px rgb(207, 207, 207);*/
+/*	height: 200px;*/
+/*	color: black;*/
+/*	background: #fbd9ad;*/
+
+/*    display: block;*/
+/*	padding: 10px;*/
+
+/*  }*/
+
+/*  .left-footer {*/
+/*    margin-left: 5em;*/
+/*    float: left;*/
+/*    font-family: Oxygen;*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 17px;*/
+
+/*  }*/
+/*  .left-footer-rmi {*/
+
+/*    font-style: normal;*/
+/*    font-weight: bold;*/
+/*    font-family: Noto Serif;*/
+/*    font-size: 30px;*/
+/*    line-height: 54px;*/
+/*    letter-spacing: -0.05em;*/
+/*    color:#000000;*/
+
+/*  }*/
+
+/*  .right-footer {*/
+/*      float: right;*/
+/*      margin-right: 5em;*/
+/*      font-family: Oxygen;*/
+/*        font-style: normal;*/
+/*        font-weight: normal;*/
+/*        font-size: 17px;*/
+
+/*  }*/
+/*  .right-footer-header {*/
+/*    font-style: normal;*/
+/*    font-weight: bold;*/
+/*    font-family: Noto Serif;*/
+/*    font-size:25px;*/
+/*  }*/
+
+/*  .linkedin {*/
+/*    margin-right: 18.5em;*/
+/*      float:right;*/
+/*      letter-spacing:normal;*/
+/*  }*/
+
+/*  .insta {*/
+/*      margin-right: 1em;*/
+/*      float: right;*/
+/*      letter-spacing:normal;*/
+/*  }*/
+/*  a {*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.comp {*/
+/*    height: 600px;*/
+/*    background: whitesmoke;*/
+
+/*}*/
+/*.text{*/
+/*    font-family: Oxygen;*/
+/*    font-size: 30px;*/
+/*    margin-left:5em;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.design {*/
+/*    position: absolute;*/
+/*    width: 600px;*/
+/*    height: 413.27px;*/
+/*    left: 83px;*/
+/*    top: 872px;*/
+/*    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
+/*    border: 3px solid #FFA07A;*/
+
+/*}*/
+
+/*.design-header {*/
+/*    position: absolute;*/
+/*width: 591px;*/
+/*height: 48px;*/
+/*left: 770px;*/
+/*top: 930px;*/
+
+/*font-family: Noto Serif;*/
+/*font-style: normal;*/
+/*font-weight: bold;*/
+/*font-size: 35px;*/
+/*line-height: 48px;*/
+/*!* identical to box height *!*/
+/*color: #000000;*/
+/*}*/
+
+/*.design-para {*/
+/*    position: absolute;*/
+/*width: 568px;*/
+/*height: 140px;*/
+/*left: 745px;*/
+/*top: 1050px;*/
+
+/*font-family: Oxygen;*/
+/*font-style: normal;*/
+/*font-weight: normal;*/
+/*font-size: 28px;*/
+/*line-height: 35px;*/
+/*text-align: center;*/
+/*display: inline-block;*/
+
+/*color: #000000;*/
+/*}*/
+
+/*.horizontal-line {*/
+/*    position: absolute;*/
+/*width: 292px;*/
+/*height: 0px;*/
+/*left: 884px;*/
+/*top: 1000px;*/
+
+/*border: 2px solid #F4976C;*/
+/*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+/*transform: rotate(-0.2deg);*/
+/*}*/
+
+
+/*!* Down below is the CSS for what used to be the form-page *!*/
+
+/*.form-parameters label {*/
+/*    margin-left: 17em;*/
+/*    font-size: 25px;*/
+/*    width: 240px;*/
+/*    display: inline-block;*/
+/*    text-align: right;*/
+/*}*/
+
+/*.form-parameters input[type = "text"] {*/
+/*    background-color: lightsalmon;*/
+/*    color: black;*/
+/*    box-sizing: border-box;*/
+/*    padding: 6px 6px;*/
+/*    margin: 5px 0;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 20px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*.form-parameters input[type = "radio"] {*/
+/*    background-color: lightsalmon;*/
+/*    color: black;*/
+/*    width: 20px;*/
+/*    margin-right: 10px;*/
+/*    display: inline-block;*/
+/*}*/
+/*.radio-label {*/
+/*    width: 100px;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*input {*/
+/*    font-size: 1.5em;*/
+/*    color: black;*/
+/*}*/
+/*.bg {*/
+/*    border-radius: 5px;*/
+/*    background-color: #f2f2f2;*/
+/*    padding: 20px;*/
+/*}*/
+
+/* home-folder's style.css */
+
 * {
     box-sizing: border-box;
 }
@@ -41,7 +294,7 @@ img {
     opacity: 0.80;
     max-width: 100%;
     position: relative;
-  }
+}
 
 .searchBar > p {
     font-size: 30px;
@@ -69,21 +322,21 @@ img {
     font-size: 20px;
 }
 
-  .main-footer {
-	bottom: 0;
-	padding-top: 10px;
-	width: 100%;
-	box-shadow: 0px 0px 25px rgb(207, 207, 207);
-	height: 200px;
-	color: black;
-	background: #fbd9ad;
+.main-footer {
+    bottom: 0;
+    padding-top: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 25px rgb(207, 207, 207);
+    height: 200px;
+    color: black;
+    background: #fbd9ad;
 
     display: block;
-	padding: 10px;
+    padding: 10px;
 
-  }
+}
 
-  .left-footer {
+.left-footer {
     margin-left: 5em;
     float: left;
     font-family: Oxygen;
@@ -91,8 +344,8 @@ img {
     font-weight: normal;
     font-size: 17px;
 
-  }
-  .left-footer-rmi {
+}
+.left-footer-rmi {
 
     font-style: normal;
     font-weight: bold;
@@ -102,36 +355,36 @@ img {
     letter-spacing: -0.05em;
     color:#000000;
 
-  }
+}
 
-  .right-footer {
-      float: right;
-      margin-right: 5em;
-      font-family: Oxygen;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
+.right-footer {
+    float: right;
+    margin-right: 5em;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
 
-  }
-  .right-footer-header {
+}
+.right-footer-header {
     font-style: normal;
     font-weight: bold;
     font-family: Noto Serif;
     font-size:25px;
-  }
+}
 
-  .linkedin {
+.linkedin {
     margin-right: 18.5em;
-      float:right;
-      letter-spacing:normal;
-  }
+    float:right;
+    letter-spacing:normal;
+}
 
-  .insta {
-      margin-right: 1em;
-      float: right;
-      letter-spacing:normal;
-  }
-  a {
+.insta {
+    margin-right: 1em;
+    float: right;
+    letter-spacing:normal;
+}
+a {
     color: black;
     text-decoration: none;
     font-size: 15px;
@@ -162,70 +415,107 @@ img {
 
 .design-header {
     position: absolute;
-width: 591px;
-height: 48px;
-left: 770px;
-top: 930px;
+    width: 591px;
+    height: 48px;
+    left: 770px;
+    top: 930px;
 
-font-family: Noto Serif;
-font-style: normal;
-font-weight: bold;
-font-size: 35px;
-line-height: 48px;
-/* identical to box height */
-color: #000000;
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 48px;
+    /* identical to box height */
+    color: #000000;
 }
 
 .design-para {
     position: absolute;
-width: 568px;
-height: 140px;
-left: 745px;
-top: 1050px;
+    width: 568px;
+    height: 140px;
+    left: 745px;
+    top: 1050px;
 
-font-family: Oxygen;
-font-style: normal;
-font-weight: normal;
-font-size: 28px;
-line-height: 35px;
-text-align: center;
-display: inline-block;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
 
-color: #000000;
+    color: #000000;
 }
 
 .horizontal-line {
     position: absolute;
-width: 292px;
-height: 0px;
-left: 884px;
-top: 1000px;
+    width: 292px;
+    height: 0px;
+    left: 884px;
+    top: 1000px;
 
-border: 2px solid #F4976C;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-transform: rotate(-0.2deg);
+    border: 2px solid #F4976C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-0.2deg);
 }
 
+/* form-folder's style.css */
 
-/* Down below is the CSS for what used to be the form-page */
+.form-box {
+    margin-left: 15em;
+    margin-right: 15em;
+    width: auto;
+    height: 1000px;
+    border: 3px solid #fbd9ad;
+    box-sizing: border-box;
+}
+
+.form-parameters {
+    width: auto;
+    height: 90;
+    background-color: #fbd9ad;
+    border: 3px solid #fbd9ad;
+    box-sizing: border-box;
+}
+.form-header {
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
 
 .form-parameters label {
-    margin-left: 17em;
+    margin-left: 5em;
     font-size: 25px;
-    width: 240px;
+    width: 300px;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 110%;
     display: inline-block;
-    text-align: right;
 }
 
-.form-parameters input[type = "text"] {
-    background-color: lightsalmon;
+.input-text {
+    background-color: #fbd9ad;
     color: black;
     box-sizing: border-box;
     padding: 6px 6px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 10px;
     box-sizing: border-box;
+}
+.start-month {
+
+    display: inline-block;
+    padding-right: 7.7em;
+}
+
+.start-year {
+
+    display: inline-block;
 }
 .form-parameters input[type = "radio"] {
     background-color: lightsalmon;
@@ -235,16 +525,25 @@ transform: rotate(-0.2deg);
     display: inline-block;
 }
 .radio-label {
-    width: 100px;
+
     display: inline-block;
 }
 
+.review-text {
+
+    background-color: #fbd9ad;
+    color: black;
+    box-sizing: border-box;
+    width: 600px;
+    height: 300px;
+    /* padding: 150px; */
+    margin-left: 6em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
 input {
     font-size: 1.5em;
     color: black;
 }
-.bg {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
+
