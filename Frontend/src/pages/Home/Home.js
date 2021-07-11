@@ -32,16 +32,9 @@ class Home extends React.Component {
                            placeholder = "Search for an internship company"
                            name = "companyName"
                            value = {this.state.companyName}
-<<<<<<< HEAD
-                           onChange = {this.handleChange}
-                    />
-                    <br />  <br />
-                </form>
-=======
                            onChange = {this.handleChange} />
-                <IoSearchOutline className='search-icon'/>
-                </form> 
->>>>>>> e46cbee4b1183b6a2845291c80318527917b8388
+                    <IoSearchOutline className='search-icon'/>
+                </form>
                 <DesignComponent />
                 <Footer />
             </div>

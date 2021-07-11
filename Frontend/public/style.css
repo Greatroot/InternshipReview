@@ -425,11 +425,8 @@ a {
     width: 591px;
     height: 48px;
     left: 770px;
-<<<<<<< HEAD
-    top: 930px;
-=======
+    /*top: 930px;*/
     top: 1050px;
->>>>>>> e46cbee4b1183b6a2845291c80318527917b8388
 
     font-family: Noto Serif;
     font-style: normal;
@@ -438,22 +435,15 @@ a {
     line-height: 48px;
     /* identical to box height */
     color: #000000;
-<<<<<<< HEAD
 }
-=======
-    }
->>>>>>> e46cbee4b1183b6a2845291c80318527917b8388
 
 .design-para {
     position: absolute;
     width: 568px;
     height: 140px;
     left: 745px;
-<<<<<<< HEAD
-    top: 1050px;
-=======
+    /*top: 1050px;*/
     top: 1200px;
->>>>>>> e46cbee4b1183b6a2845291c80318527917b8388
 
     font-family: Oxygen;
     font-style: normal;
@@ -471,11 +461,8 @@ a {
     width: 292px;
     height: 0px;
     left: 884px;
-<<<<<<< HEAD
-    top: 1000px;
-=======
+    /*top: 1000px;*/
     top: 1135px;
->>>>>>> e46cbee4b1183b6a2845291c80318527917b8388
 
     border: 2px solid #F4976C;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
