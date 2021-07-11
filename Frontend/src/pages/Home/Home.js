@@ -1,12 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import WhiteComponent from "./WhiteComponent";
+import DesignComponent from "./DesignComponent";
 import Footer from "./Footer.js";
-import Image from "./Image";
-
+import Image from "./Image.js"
+import {IoSearchOutline} from "react-icons/all";
+import Search from "../../components/SearchBar/SearchBar.js"
 class Home extends React.Component {
     constructor() {
-        super();
+        super()
         this.state = {
             companyName: ""
         }
@@ -16,7 +17,7 @@ class Home extends React.Component {
         const {name, value} = event.target
         this.setState({
             [name]: value
-        });
+        })
 
     }
 
@@ -24,18 +25,17 @@ class Home extends React.Component {
         return(
             <div>
                 <Image />
-                <form className="searchBar">
-                    <p> Because interning
-                        is supposed to be fun! </p>
+                 <form className="searchBar">
+                    <p> Because Interning
+                        Should Be Fun! </p>
                     <input type = "text"
                            placeholder = "Search for an internship company"
                            name = "companyName"
                            value = {this.state.companyName}
-                           onChange = {this.handleChange}
-                    />
-                    <br />  <br />
+                           onChange = {this.handleChange} />
+                    <IoSearchOutline className='search-icon'/>
                 </form>
-                <WhiteComponent />
+                <DesignComponent />
                 <Footer />
             </div>
         )
