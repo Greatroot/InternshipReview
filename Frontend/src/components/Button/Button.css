@@ -88,12 +88,24 @@
 }
 
 .primary {
+    background-color: #fbe7a6;
+    color: #000000;
+    border-color: #F4976C;
+}
+
+.primary:hover {
+    background-color: #ffffff;
+    color: #242424;
+    border: none;
+}
+
+.black {
     background-color: #242424;
     color: #fff;
     border: none;
 }
 
-.primary:hover {
+.black:hover {
     background-color: #ffffff;
     color: #242424;
     border: none;

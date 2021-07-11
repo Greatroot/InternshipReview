@@ -72,12 +72,10 @@ const Header = () => {
                     {/*<div className="menu-icon" onClick={handleClick} >*/}
                     {/*    {click ? <FaTimes /> : <FaBars /> }*/}
                     {/*</div>*/}
-                    <ul className='nav-menu'>
-                        <li className='nav-item'>
-                            <Link to="/add-internship" className='nav-links'>
-                                Rate an Internship
-                            </Link>
-                        </li>
+                    <ul className='nav-btn'>
+                        <Link to="/add-internship" className='btn-link'>
+                            <Button buttonStyle="btn--outline"> Rate an Internship </Button>
+                        </Link>
 
                         {/* ******* Everything below is the log in and sign up buttons for authentication *******
                         ********** Will implement later! **********
