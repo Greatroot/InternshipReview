@@ -4,7 +4,7 @@ function DesignComponent() {
     return(
         <div className="comp">
 
-            <p className="text">
+            <p>
                 <div class="design-header">Find the right Internship for you!<br />
                 </div>
                 <div class="horizontal-line">  <hr /></div>

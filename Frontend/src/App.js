@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Home from "./pages/Home/Home";
 import Results from "./pages/Results/Results";
 import Footer from "./pages/Home/Footer";
+import Form from "./pages/Form/Form"
 
 // TODO: Update the social media links once we make actual accounts.
 function App() {

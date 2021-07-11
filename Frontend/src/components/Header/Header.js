@@ -66,7 +66,7 @@ const Header = () => {
             <nav className="navbar">
                 <div className="navbar-container container">
                     <Link to='/' className="navbar-logo">
-                        Rate My Internship
+                        Rate My Internships
                     </Link>
                     {/*TODO: Remove if the hamburger menu never gets used*/}
                     {/*<div className="menu-icon" onClick={handleClick} >*/}

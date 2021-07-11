@@ -34,10 +34,11 @@
     font-size: 3rem;
     display: flex;
     align-items: center;
-
-    font-family: Staatliches;
+    font-family: Noto Serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
+    line-height: 68px;
+    letter-spacing: -0.05em;
 }
 
 .navbar-icon {

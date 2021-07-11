@@ -4,10 +4,9 @@ function Image() {
     return (
      <div>
         <img 
-        src="https://rscbga.com/wp-content/uploads/2021/04/png-internship-8-png-image-internship-png-1599_533.png" 
+        src="https://cdn.discordapp.com/attachments/860573504611942430/863559568427712512/unknown.png" 
         alt="Problem?"
     />
-    <br />  <br /> 
     </div> 
     )
 
