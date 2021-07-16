@@ -3,14 +3,13 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from "./pages/Home/Home";
 import Results from "./pages/Results/Results";
-import Footer from "./pages/Home/Footer";
+import Footer from "../src/components/Footer/Footer";
 import Form from "./pages/Form/Form";
 
 // TODO: Update the social media links once we make actual accounts.
 function App() {
     return (
         <BrowserRouter>
-            <Header />
             <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/add-internship' component={Form}/>

@@ -2,15 +2,15 @@
     margin-top: 5rem;
     padding-left: 1rem;
     display: flex;
-    border: 3px solid #FFA07A;
-    border-radius: 25px;
+    border: 1px solid #FFA07A;
+    border-radius: 10px;
     background-color :#fbe7a6;
     width: 700px;
     height: 48px;
     align-items: center;
 }
 
-.search-bar > input {
+.search-bar--input {
     margin: auto;
     border: none;
     background-color: transparent;
@@ -18,12 +18,15 @@
     font-size: 17px;
     flex: 9;
     align-self: flex-start;
-
-
 }
 
-.search-icon {
+/* TODO: Figure out what we want to happen when search bar is clicked. */
+.search-bar--input:focus {
+    /*outline: none;*/
+    border-radius: 10px;
+}
+
+.search-bar--icon {
     font-size: 24px;
-    color: #042A2B;
     flex: 1;
 }

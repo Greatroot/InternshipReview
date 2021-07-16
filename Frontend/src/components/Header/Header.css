@@ -80,7 +80,11 @@
     display: none;
 }
 
-/*TODO: Everything below is a reminant of the hamburger button and the responsiveness of the header. Need to
+.bottom-border {
+    border-bottom: 2px solid #EF7B45;
+}
+
+/*TODO: Everything below is a remnant of the hamburger button and the responsiveness of the header. Need to
   remove or modify later on. */
 
 /*@media screen and (max-width: 960px) {*/

@@ -1,0 +1,27 @@
+.results-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 5rem 2rem;
+}
+
+.searchBar-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-term {
+    margin-left: 4rem;
+
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 95px;
+    text-transform: capitalize;
+    color: #042A2B;
+}

@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14f36317-8731-4b3e-8928-600c6b50f996" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.js.orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home/Home.js.orig.orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home/WhiteComponent.js.orig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Footer.js.orig" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Footer.js.orig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Footer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.js.orig" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js.orig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/WhiteComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/WhiteComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Results/Results.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Results/Results.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Results/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Results/Results.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,15 +56,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -81,6 +81,10 @@
       <workItem from="1625613666453" duration="3535000" />
       <workItem from="1625893211003" duration="89000" />
       <workItem from="1625893410053" duration="2832000" />
+      <workItem from="1626380261475" duration="115000" />
+      <workItem from="1626381695656" duration="4654000" />
+      <workItem from="1626413739184" duration="3107000" />
+      <workItem from="1626416936989" duration="4343000" />
     </task>
     <servers />
   </component>

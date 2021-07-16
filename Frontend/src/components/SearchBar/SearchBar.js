@@ -11,8 +11,9 @@ const SearchBar = ({ type, placeholder, name, value, onChange }) => {
                    name = { name }
                    value = { value }
                    onChange = { onChange }
+                   className="search-bar--input"
             />
-            <IoSearchOutline className='search-icon'/>
+            <IoSearchOutline className='search-bar--icon'/>
         </form>
     );
 }
