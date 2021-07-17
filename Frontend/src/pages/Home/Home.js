@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import DesignComponent from "./DesignComponent";
-import Footer from "./Footer.js";
+import Footer from "../../components/Footer/Footer";
 import Image from "./Image.js"
 import {IoSearchOutline} from "react-icons/all";
 import Search from "../../components/SearchBar/SearchBar.js"
@@ -32,7 +32,9 @@ class Home extends React.Component {
                            placeholder = "Search for an internship company"
                            name = "companyName"
                            value = {this.state.companyName}
-                           onChange = {this.handleChange} />
+                           onChange = {this.handleChange}
+                           className="searchBar-input"
+                    />
                     <IoSearchOutline className='search-icon'/>
                 </form>
                 <DesignComponent />

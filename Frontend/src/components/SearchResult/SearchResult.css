@@ -1,0 +1,83 @@
+/* TODO: Make all of the margins responsive */
+/* change padding and margin units to rem to make more responsive? */
+
+:root {
+    /* Global CSS variables */
+    --primary: #fbe7a6;
+    --secondary: #F4976C;
+}
+
+.card-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 30px;
+    transition: 0.2s ease;
+    border: 2px solid var(--secondary);
+}
+
+.card-header {
+    background: var(--primary);
+    border-radius: 30px 30px 0px 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.card-header--container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.card-stars {
+
+}
+
+.position-header {
+    margin-left: 20px;
+    margin-right: 40px;
+    max-height: 100px;
+}
+
+.position-header--container {
+    display: flex;
+    justify-content: space-between;
+    color: #042A2B;
+    font-family: Oxygen, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 38px;
+    text-transform: capitalize;
+}
+
+.subheader-container {
+    display: flex;
+}
+
+.subheader {
+    font-family: Noto Serif, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 34px;
+    text-transform: capitalize;
+    margin-left: 25px;
+    border-bottom: 2px solid #F4976C;
+}
+
+.subheader-text {
+    margin-left: 0.5rem;
+}
+
+.content {
+    font-family: Oxygen, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+}

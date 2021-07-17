@@ -6,7 +6,7 @@ import {Button} from "../Button/Button";
 import {FaBars, FaTimes} from "react-icons/fa";
 import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
-const Header = () => {
+const Header = ({ bottomBorder }) => {
 
     // TODO: Remove next four lines if we really decide to never use a hamburger menu.
 
@@ -64,7 +64,7 @@ const Header = () => {
         // Ben's code:
         <>
             <nav className="navbar">
-                <div className="navbar-container container">
+                <div className={`navbar-container container ${bottomBorder ? "bottom-border" : ""}`}>
                     <Link to='/' className="navbar-logo">
                         Rate My Internships
                     </Link>

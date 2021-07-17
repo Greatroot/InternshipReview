@@ -289,7 +289,7 @@ img {
     text-transform: capitalize;
 }
 
-.searchBar > input {
+.searchBar-input {
     border: 3px solid #FFA07A;
     border-radius: 20px;
     background-color :whitesmoke;
@@ -303,9 +303,14 @@ img {
     align-items: center;
     position: relative;
 }
+
+.searchBar-input:focus {
+    border-radius: 5px;
+    outline: none;
+}
+
 .search-icon {
     font-size: 24px;
-    color: #042A2B;
     align-items: center;
     position: relative;
     top: -590px;
