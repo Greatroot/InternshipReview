@@ -96,7 +96,9 @@ function search() {
             <input type="text" className="review-text"/>
 
             <br /><br /><br />
-
+            <div className="button-submit">
+            <button type="button">Submit</button>
+            </div>
         </div>
     )
 }

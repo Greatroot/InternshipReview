@@ -261,33 +261,14 @@ body {
     overflow-x: hidden;
 }
 
-header > h3 {   /* align website name and write a review together */
+ header > h3 {   /* align website name and write a review together */
     font-weight: normal;
     font-family: Noto Serif Bold;
     position: relative;
     color: white;
     float: right;
-    display: inline;
-}
-
-.rmi {      /* align website name and write a review together */
-    color: whitesmoke;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: inline;
-    float: left;
-    font-size: 150%;
-    position: relative;
-}
-mark.white {
-    color:white;
-    background: none;
-    position: relative;
-}
-mark.black {
-    color:black;
-    background: none;
-    position: relative;
-}
+    display: inline; 
+  }
 
 img {
     max-width: 100%;
@@ -311,7 +292,7 @@ img {
 .searchBar > input {
     border: 3px solid #FFA07A;
     border-radius: 20px;
-    background-color :#fbe7a6;
+    background-color :whitesmoke;
     margin: auto; 
     display: block; 
     padding: 10px;
@@ -471,7 +452,7 @@ a {
 
 /* form-folder's style.css */
 
-.form-box {
+/* .form-box {
     margin-left: 15em;
     margin-right: 15em;
     width: auto;
@@ -547,7 +528,7 @@ a {
     width: 600px;
     height: 300px;
     /* padding: 150px; */
-    margin-left: 6em;
+    /* margin-left: 6em;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
@@ -556,4 +537,4 @@ input {
     font-size: 1.5em;
     color: black;
 }
-
+ */ 

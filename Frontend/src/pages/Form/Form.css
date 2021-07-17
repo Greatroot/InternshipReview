@@ -1,0 +1,97 @@
+body{
+    background-color:rgba(255, 140, 8, 0.3);
+}
+.form-box {
+    margin-left: 15em;
+    margin-right: 15em;
+    /* width: auto; */
+    height: 1050px;
+    border: 3px solid #fbd9ad;
+    box-sizing: border-box;
+    background-color: white;
+
+}
+
+.form-parameters {
+    width: auto;
+    height: 90;
+    background-color: whitesmoke;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+.form-header {
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+
+.form-parameters label {
+    margin-left: 5em;
+    font-size: 25px;
+    width: 300px;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 110%;
+    display: inline-block;
+}
+
+.input-text {
+    background-color: whitesmoke;
+    color: black;
+    box-sizing: border-box;
+    padding: 6px 6px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid lightsalmon;
+}
+.start-month {
+    display: inline-block;
+    padding-right: 7.7em;
+    /* border: 1px solid lightsalmon; */
+}
+
+.start-year {
+    display: inline-block;
+    /* border: 2px solid lightsalmon; */
+}
+.form-parameters input[type = "radio"] {
+    background-color: lightsalmon;
+    color: black;
+    width: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid lightsalmon;
+}
+.radio-label {
+
+    display: inline-block;
+}
+
+.review-text {
+
+    background-color: whitesmoke;
+    color: black;
+    box-sizing: border-box;
+    width: 700px;
+    height: 300px;
+    /* padding: 150px; */
+    margin-left: 6em;
+    border: 1px solid lightsalmon;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input {
+    font-size: 1.5em;
+    color: black;
+}
+
+.button-submit {
+    color: #fbd9ad;
+    margin-left: 28em;
+}
