@@ -1,4 +1,5 @@
 const express = require('express')
+const PORT = process.env.PORT || 3001;
 const app = express()
 const mysql = require('mysql')
 const cors = require('cors')
@@ -54,6 +55,9 @@ app.get('/reviews', (req, res) => {
             res.send(result)
         }
     })
+    // testing
+    // console.log("hi");
+    // res.json({message: "hello"});
 })
 
 app.post('/create', (req, res) => {
@@ -79,4 +83,7 @@ app.post('/create', (req, res) => {
 
 app.listen(process.env.PORT || PORT, () => {
     console.log("server running on port ${PORT}");
-});
+}); 
+// app.listen(PORT, () => {
+//     console.log(`Server listening on ${PORT}`);
+//   });

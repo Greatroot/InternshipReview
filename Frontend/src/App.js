@@ -6,11 +6,23 @@ import Results from "./pages/Results/Results";
 import Footer from "../src/components/Footer/Footer";
 import Form from "./pages/Form/Form";
 import { Button } from './components/Button/Button';
+import Axios from 'axios'
 
-// TODO: Update the social media links once we make actual accounts.
 function App() {
+        const [data, setData] = React.useState(null);
+
+        React.useEffect(() => {
+        Axios.get("https://internship-review-backend.herokuapp.com/api/get").then((data) =>  {
+        // fetch("/reviews")
+        // .then((res) => res.json())
+        // .then((data) => setData(data.message));
+        console.log(data.data)
+    });
+ }, []);
+
     return (
         <BrowserRouter>
+        <Header />
             <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/add-internship' component={Form}/>
