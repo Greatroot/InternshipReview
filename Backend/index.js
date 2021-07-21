@@ -74,13 +74,15 @@ app.post('/create', (req, res) => {
     const company = req.body.company;
     const position = req.body.position;
     const rating = req.body.rating;
-    const start = req.body.start;
-    const end = req.body.end;
+    const startMonth = req.body.startMonth;
+    const startYear = req.body.startYear;
+    const endMonth = req.body.endMonth;
+    const endYear = req.body.endYear
     const comments = req.body.comments;
 
     db.query(
         "INSERT INTO reviews (company, position, rating, start, end, comments) VALUES (?, ?, ?, ?, ?, ?)", 
-        [company, position, rating, start, end, comments], 
+        [company, position, rating, startMonth, startYear,endMonth,endYear, comments], 
         (err, result) => {
             if (err) {
                 console.log(err)
