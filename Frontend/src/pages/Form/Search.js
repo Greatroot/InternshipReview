@@ -1,48 +1,27 @@
-import React,{useState} from "react"
-import Axios from 'axios'
+import React from "react"
 
-function Search () {
-
-    const [company, setCompany] = useState("");
-    const [position, setPosition] = useState("");
-    const [rating, setRating] = useState(0);
-    const [startMonth, setStartMonth] = useState(0);
-    const [startYear, setStartYear] = useState(0);
-    const [endMonth, setEndMonth] = useState(0);
-    const [endYear, setEndYear] = useState(0);
-    const [comments, setComments] = useState("");
-    const [newComment, setNewComment] = useState("")
-    const [reviewList, setReviewList] = useState([]);
-    
-
-    const addReview = () => {
-      Axios.post('https://internship-review-backend.herokuapp.com/create', {
-  
-        company: company, 
-        position: position, 
-        rating: rating,
-        startMonth: startMonth,
-         startYear: startYear,
-        endMonth: endMonth,
-         endYear: endYear,
-        comments: comments,
-      }).then((() => {
-        console.log("success");
-        setReviewList([
-          ...reviewList, {
-            company: company, 
-            position: position, 
-            rating: rating,
-            startMonth: startMonth,
-            startYear: startYear,
-            endMonth: endMonth,
-            endYear: endYear,
-            comments: comments,
-          },
-        ]);
-      }))
-    };
-
+class Search extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            companyName: "",
+            startMonth: "",
+            startYear: "",
+            endMonth: "",
+            endYear: "",
+            internshipPosition: "",
+            rating: "",
+            internshipReview: ""
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+    handleChange(event) {
+        const {name, value} = event.target
+        this.setState({
+            [name]: value
+        }) 
+    }
+render() {
     return(
         <div className="form-parameters">
             <div className="form-header">
@@ -52,22 +31,19 @@ function Search () {
             <form> 
                 <label>Name of Company:</label>
                 <input 
+                    name="companyName"
                     type="text" 
                     className="input-text"
-                    onChange={(event) => {
-                        setCompany(event.target.value)
-                    }}
-                    />
+                    value={this.state.companyName} 
+                    onChange={this.handleChange} />
                 <br /><br /><br />
 
                 <label>Internship Start Date:</label>
                 <div className="start-month">
                     <select 
-                        value={startMonth} 
+                        value={this.state.startMonth} 
                         name="startMonth" 
-                        onChange={(event) => {
-                            setStartMonth(event.target.value)
-                        }}
+                        onChange={this.handleChange}
                     >
                         <option value="">Month</option>
                         <option value="January"> January</option>
@@ -86,11 +62,9 @@ function Search () {
                 </div>
                 <div className="start-year">
                     <select
-                        value={startYear} 
+                        value={this.state.startYear} 
                         name="startYear" 
-                        onChange={(event) => {
-                            setStartYear(event.target.value)
-                        }}
+                        onChange={this.handleChange}
                     >
                         <option value="">Year</option>
                         <option value="2016"> 2016</option>
@@ -105,11 +79,9 @@ function Search () {
                 <label>Internship End Date:</label>
                 <div className="start-month">
                     <select
-                        value={endMonth} 
+                        value={this.state.endMonth} 
                         name="endMonth" 
-                        onChange={(event) => {
-                            setEndMonth(event.target.value)
-                        }}
+                        onChange={this.handleChange}
                     >
                         <option value="">Month</option>
                         <option value="January"> January</option>
@@ -128,11 +100,9 @@ function Search () {
                 </div>
                 <div className="start-year">
                     <select
-                        value={endYear} 
+                        value={this.state.endYear} 
                         name="endYear" 
-                        onChange={(event) => {
-                            setEndYear(event.target.value)
-                        }}
+                        onChange={this.handleChange}
                     >
                         <option value="">Year</option>
                         <option value="2016"> 2016</option>
@@ -147,11 +117,11 @@ function Search () {
 
                 <label>Internship Position:</label>
                 <input
+                    name="internshipPosition"
                     type="text" 
                     className="input-text"
-                    onChange={(event) => {
-                        setPosition(event.target.value)
-                    }}
+                    value={this.state.internshipPosition} 
+                    onChange={this.handleChange}
                     />
                 <br /><br /><br />
 
@@ -162,47 +132,37 @@ function Search () {
                     type="radio"
                     name="rating"
                     value="oneStar"
-                    checked={rating === "oneStar"}
-                    onChange={(event) => {
-                        setRating(event.target.value)
-                    }}
+                    checked={this.state.rating === "oneStar"}
+                    onChange={this.handleChange}
                     />
 
                     <input
                     type="radio"
                     name="rating"
                     value="twoStar"
-                    checked={rating === "twoStar"}
-                    onChange={(event) => {
-                        setRating(event.target.value)
-                    }}/>
+                    checked={this.state.rating === "twoStar"}
+                    onChange={this.handleChange}/>
 
                     <input
                     type="radio"
                     name="rating"
                     value="threeStar"
-                    checked={rating === "threeStar"}
-                    onChange={(event) => {
-                        setRating(event.target.value)
-                    }}/>
+                    checked={this.state.rating === "threeStar"}
+                    onChange={this.handleChange}/>
 
                     <input
                     type="radio"
                     name="rating"
                     value="fourStar"
-                    checked={rating === "fourStar"}
-                    onChange={(event) => {
-                        setRating(event.target.value)
-                    }}/>
+                    checked={this.state.rating === "fourStar"}
+                    onChange={this.handleChange}/>
 
                     <input
                     type="radio"
                     name="rating"
                     value="fiveStar"
-                    checked={rating === "fiveStar"}
-                    onChange={(event) => {
-                        setRating(event.target.value)
-                    }}/>
+                    checked={this.state.rating === "fiveStar"}
+                    onChange={this.handleChange}/>
                 </div>
                 <br /><br /><br />
 
@@ -210,22 +170,19 @@ function Search () {
                 <br /> <br /> <br />
 
                 <input
+                name="internshipReview"
                 type="text" 
                 className="review-text"
-                onChange={(event) => {
-                    setComments(event.target.value)
-                }}/>
+                value={this.state.internshipReview} 
+                onChange={this.handleChange}/>
 
                 <br /><br /><br />
                 <div className="button-submit">
-                <button 
-                onClick={addReview}
-                >Add Review</button>
+                <button type="button">Submit</button>
                 </div>
             </form>
         </div>
     )
-    }
-
-
+}
+}
 export default Search
