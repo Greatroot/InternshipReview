@@ -1,1 +1,0 @@
-This is the folder to store our server for the Internship Review Project.

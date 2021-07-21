@@ -8,17 +8,15 @@ import Form from "./pages/Form/Form";
 import { Button } from './components/Button/Button';
 import Axios from 'axios'
 
-function App() {
-        const [data, setData] = React.useState(null);
 
-        React.useEffect(() => {
-        Axios.get("https://internship-review-backend.herokuapp.com/api/get").then((data) =>  {
-        // fetch("/reviews")
-        // .then((res) => res.json())
-        // .then((data) => setData(data.message));
-        console.log(data.data)
-    });
- }, []);
+function App() {
+    // const [data, setData] = React.useState(null);
+    // React.useEffect(() => {
+    //     fetch("/create")
+    //       .then((res) => res.json())
+    //       .then((data) => setData(data.message));
+    //   }, []);
+    
 
     return (
         <BrowserRouter>
@@ -28,6 +26,7 @@ function App() {
                 <Route path='/add-internship' component={Form}/>
                 <Route path='/results' component={Results} />
                 {/* <Route path='/submit' component={Home} /> */}
+                {/* need to add one for when we click the submit button of the form it takes us to the home page */}
                 <Route path='/instagram' component={() => {
                     window.location.href = "https://www.instagram.com/ratemyinternships/?hl=en";
                     return null;
@@ -41,6 +40,7 @@ function App() {
         </BrowserRouter>
     )
 }
+
 
 export default App;
 
