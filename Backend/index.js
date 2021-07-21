@@ -83,10 +83,9 @@ app.post('/create', (req, res) => {
     )
 });
 
-// app.listen(process.env.PORT || PORT, () => {
-//     console.log("server running on port ${PORT}");
-// }); 
-app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
-  });
-
+app.listen(process.env.PORT || PORT, () => {
+    console.log("server running on port ${PORT}");
+}); 
+// app.listen(PORT, () => {
+//     console.log(`Server listening on ${PORT}`);
+//   });
