@@ -8,10 +8,10 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    user: 'bcb45b2cf00546',
-    host: 'us-cdbr-east-04.cleardb.com',
-    password: '1cf42285',
-    database: 'heroku_3c7763526e153a6',
+    user: 'root',
+    host: 'localhost',
+    password: 'password',
+    database: 'internship_review',
 });
 
 app.put('/update', (req, res) => {
