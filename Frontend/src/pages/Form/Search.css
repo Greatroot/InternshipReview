@@ -1,3 +1,4 @@
+/* MOBILE */
 html {
     height: 100%
 }
@@ -6,86 +7,14 @@ html {
     box-sizing: border-box;
 }
 
-.formButton {
-    display: none;
-}
-
-hr {
-    border: 2px solid #FFA07A;
-    margin-bottom: 3em;
-}
-
-.appName {
-    letter-spacing: .3em;
-    width: 100%;
-}
 
 
-/* add internship search thingy under line divider*/
-
-.form-parameters {
-    width: auto;
-    height: em;
-    box-sizing: border-box;
-}
-
-.form-header {
-    font-family: Noto Serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2em;
-    text-align: left;
-    margin-left: 1em;
-}
-
-.form-parameters label {
-    margin-left: 2em;
-    font-size: 1em;
-    font-family: Oxygen;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 200%;
-    display: block;
-}
-
-.input-text {
-    background-color: whitesmoke;
-    color: black;
-    box-sizing: border-box;
-    border: .1em solid lightsalmon;
-    display: block;
-    width: 85%;
-    margin-left: 2em;
-}
-
-.start-month {
-    display: inline-block;
-    border: .1em solid lightsalmon;
-    margin-left: 2em;
-}
-
-.start-year {
-    display: inline-block;
-    border: .1em solid lightsalmon;
-    margin-left: 2em;
-}
-
-.form-parameters input[type = "radio"] {
-    background-color: lightsalmon;
-    color: black;
-    width: 85%;
-    display: block;
-    border: 1px solid lightsalmon;
-}
-
-.radio-label {
-    display: inline-block;
-}
 
 
+/* Everything below is the old desktop styling: */
 
 /*
-.body{
+body{
     background-color:rgba(255, 140, 8, 0.3);
 }
 .form-box {

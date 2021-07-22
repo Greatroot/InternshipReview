@@ -9,6 +9,7 @@ import "./Form.css"
 function app() {
     return (
         <div>
+        <hr></hr>
         <div className="form-box">
             <Search />
         </div>

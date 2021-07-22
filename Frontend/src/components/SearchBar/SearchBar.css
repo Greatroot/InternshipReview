@@ -1,12 +1,13 @@
 .search-bar {
-    margin-top: 5rem;
-    padding-left: 1rem;
+    margin: auto;
+    padding: .5em;
+    font-size: 1em;
     display: flex;
-    border: 1px solid #FFA07A;
-    border-radius: 10px;
-    background-color :#fbe7a6;
-    width: 700px;
-    height: 48px;
+    border: .2em solid #FFA07A;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    width: 67%;
+    height: 1.8em;
     align-items: center;
 }
 
@@ -22,11 +23,54 @@
 
 /* TODO: Figure out what we want to happen when search bar is clicked. */
 .search-bar--input:focus {
-    /*outline: none;*/
-    border-radius: 10px;
+    border-radius: 1px;
+    outline: none;
 }
 
 .search-bar--icon {
-    font-size: 24px;
+    font-size: .8em;
     flex: 1;
+    position: absolute;
 }
+
+/*.searchBar > p {
+    font-family: Noto serif;
+    font-size: 1em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -15em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.searchBar-input {
+    border: .2em solid #FFA07A;
+    border-radius: 20px;
+    background-color :whitesmoke;
+    margin: auto; 
+    display: flex; 
+    padding: .5em;
+    font-size: 1em;
+    width: 67%;
+    height: 1.8em;
+    top: -16em;
+    align-items: center;
+    position: relative;
+}
+
+.searchBar-input:focus {
+    border-radius: 1px;
+    outline: none;
+}
+
+.search-icon {
+    font-size: .8em;
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: -21.5em;
+    left: 80%;
+}*/

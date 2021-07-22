@@ -48,7 +48,6 @@ function Search () {
             <div className="form-header">
                 <p> Write a Review </p>
             </div>
-            <br />
             <form> 
                 <label>Name of Company:</label>
                 <input 
@@ -58,7 +57,7 @@ function Search () {
                         setCompany(event.target.value)
                     }}
                     />
-                <br /><br /><br />
+                <br />
 
                 <label>Internship Start Date:</label>
                 <div className="start-month">
@@ -153,7 +152,7 @@ function Search () {
                         setPosition(event.target.value)
                     }}
                     />
-                <br /><br /><br />
+                <br /><br />
 
                 <label>Internship Rating:</label>
                 <div className="radio-label">
@@ -207,7 +206,7 @@ function Search () {
                 <br /><br /><br />
 
                 <label>Internship Review:</label>
-                <br /> <br /> <br />
+                <br /> <br />
 
                 <input
                 type="text" 
