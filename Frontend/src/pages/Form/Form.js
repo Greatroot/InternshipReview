@@ -9,12 +9,23 @@ import "./Form.css"
 function app() {
     return (
         <div>
-        <hr></hr>
-        <div className="form-box">
-            <Search />
-        </div>
-        <br /><br /><br />
-        <Footer /> 
+            <hr></hr>
+            <div className="form-box">
+                <Search />
+            </div>
+
+            <div class="overlay">
+                <div class="popup">
+                    <h1>Confirmation</h1>
+                    <p>Your review was successfully submitted!</p>
+                    <div class="exit-overlay">
+                        <button class="btn-cancel">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <br /><br /><br />
+            <Footer />
         </div>
     )
 }
