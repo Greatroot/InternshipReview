@@ -2,7 +2,7 @@ import React from "react"
 
 function Image() {
     return (
-     <div>
+     <div className='background'>
         <img 
         src="https://cdn.discordapp.com/attachments/860573504611942430/863559568427712512/unknown.png" 
         alt="Problem?"

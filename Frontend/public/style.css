@@ -251,24 +251,33 @@
 
 /* home-folder's style.css */
 
+/* MOBILE */
+html {
+    height: 100%
+}
+
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding:0;
-    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
 }
 
- header > h3 {   /* align website name and write a review together */
-    font-weight: normal;
-    font-family: Noto Serif Bold;
+.appName {
+    position: absolute;
+    font-size: .5em;
+    width: 10em;
+}
+
+/* not resizing rn */
+.formButton {
     position: relative;
-    color: white;
-    float: right;
-    display: inline; 
-  }
+    font-size: .3em;
+}
 
 img {
     max-width: 100%;
@@ -277,183 +286,269 @@ img {
 
 .searchBar > p {
     font-family: Noto serif;
-    font-size: 40px;
+    font-size: 1em;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -560px;
+    top: -15em;
     font-weight: bold;
-    line-height: 54px;
     text-transform: capitalize;
 }
 
 .searchBar-input {
-    border: 3px solid #FFA07A;
+    border: .2em solid #FFA07A;
     border-radius: 20px;
     background-color :whitesmoke;
     margin: auto; 
-    display: block; 
-    padding: 10px;
-    font-size: 17px;
-    width: 760px;
-    height: 52px;
-    top: -550px;
+    display: flex; 
+    padding: .5em;
+    font-size: 1em;
+    width: 67%;
+    height: 1.8em;
+    top: -16em;
     align-items: center;
     position: relative;
 }
 
 .searchBar-input:focus {
-    border-radius: 5px;
+    border-radius: 1px;
     outline: none;
 }
 
 .search-icon {
-    font-size: 24px;
+    font-size: .8em;
     align-items: center;
+    display: flex;
     position: relative;
-    top: -590px;
-    left: 1060px;
+    top: -21.5em;
+    left: 80%;
 }
+
 ::placeholder  {
     font-family: Noto Serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: .8em;
 }
 
-.main-footer {
-    bottom: 0;
-    padding-top: 10px;
-    width: 100%;
-    box-shadow: 0px 0px 25px rgb(207, 207, 207);
-    height: 200px;
-    color: black;
-    background: #fbd9ad;
+/* Need to re-code the design for MOBILE only above */
 
-    display: block;
-    padding: 10px;
+/* Media Queries */
+/* LAPTOPS */
+@media (min-width: 768px) {
+    html {
+        height: 100%;
+      }
 
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding:0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+     header > h3 {   /* align website name and write a review together */
+        font-weight: normal;
+        font-family: Noto Serif Bold;
+        position: relative;
+        color: white;
+        float: right;
+        display: inline; 
+      }
+    
+    img {
+        max-width: 100%;
+        position: relative;
+    }
+    
+    .searchBar > p {
+        font-family: Noto serif;
+        font-size: 3em;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -560px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    
+    .searchBar-input {
+        border: .2em solid #FFA07A;
+        border-radius: 20px;
+        background-color :whitesmoke;
+        margin: auto; 
+        display: flex; 
+        padding: .5em;
+        font-size: 1em;
+        width: 67%;
+        height: 2.5em;
+        top: -550px;
+        align-items: center;
+        position: relative;
+    }
+    
+    .searchBar-input:focus {
+        border-radius: 1px;
+        outline: none;
+    }
+    
+    .search-icon {
+        font-size: 1.8em;
+        align-items: center;
+        display: flex;
+        position: relative;
+        top: -580px;
+        left: 80%;
+    }
+
+    ::placeholder  {
+        font-family: Noto Serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    
+    .main-footer {
+        bottom: 0;
+        padding-top: 10px;
+        width: 100%;
+        box-shadow: 0px 0px 25px rgb(207, 207, 207);
+        height: 12em;
+        color: black;
+        background: #fbd9ad;
+        display: block;
+        padding: 10px;    
+    }
+    
+    .left-footer {
+        margin-left: 5em;
+        float: left;
+        font-family: Oxygen;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1em;
+    
+    }
+    .left-footer-rmi {
+        font-style: normal;
+        font-weight: bold;
+        font-family: Noto Serif;
+        font-size: 2em;
+        line-height: 2em;
+        letter-spacing: -0.05em;
+        color:#000000;
+    }
+    
+    .right-footer {
+        float: right;
+        margin-right: 5em;
+        font-family: Oxygen;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1em;
+    }
+
+    .right-footer-header {
+        font-style: normal;
+        font-weight: bold;
+        font-family: Noto Serif;
+        font-size: 2em;
+    }
+    
+    /* socials aren't floating right?? */
+    .linkedin {
+        margin-right: 18.5em;
+        float:right;
+        letter-spacing:normal;
+    }
+    
+    .insta {
+        margin-right: 1em;
+        float: right;
+        letter-spacing:normal;
+    }
+    /* ------------------------------------------------- */
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 1em;
+    }
+    
+    .comp {
+        height: 40em;
+        width: 100%;
+        background: white;
+    }
+    
+    .design {
+        position: relative;
+        width: 50%;
+        left: 5em;
+        top: 5em;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        padding: none;
+        border: .3em solid #FFA07A;    
+    }
+    
+    .design-header {
+        /*top: 1050px;*/
+        position: absolute;
+        width: 15em;
+        height: 5em;
+        margin-left: 24em;
+        top: 36em;
+        font-family: Noto Serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2em;
+        /* identical to box height */
+        color: #000000;
+    }
+    
+    .design-para {
+        /*top: 1200px;*/
+        position: absolute;
+        width: 15em;
+        height: 3em;
+        margin-left: 24em;
+        top: 40em;
+        font-family: Oxygen;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2em;
+        text-align: center;
+        display: inline-block;
+        color: #000000;
+    }
+    
+    .horizontal-line {
+        /*top: 1135px;*/
+        position: absolute;
+        width: 20em;
+        height: 0;
+        margin-left: 54em;
+        top: 77em;
+        border: 2px solid #F4976C;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(-0.2deg);
+    }
 }
 
-.left-footer {
-    margin-left: 5em;
-    float: left;
-    font-family: Oxygen;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
+/*
+MONITORS
+@media (min-width: 992px) {
 
 }
-.left-footer-rmi {
-
-    font-style: normal;
-    font-weight: bold;
-    font-family: Noto Serif;
-    font-size: 30px;
-    line-height: 54px;
-    letter-spacing: -0.05em;
-    color:#000000;
-
-}
-
-.right-footer {
-    float: right;
-    margin-right: 5em;
-    font-family: Oxygen;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-
-}
-.right-footer-header {
-    font-style: normal;
-    font-weight: bold;
-    font-family: Noto Serif;
-    font-size:25px;
-}
-
-.linkedin {
-    margin-right: 18.5em;
-    float:right;
-    letter-spacing:normal;
-}
-
-.insta {
-    margin-right: 1em;
-    float: right;
-    letter-spacing:normal;
-}
-a {
-    color: black;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.comp {
-    height: 500px;
-    background: white;
-}
-
-.design {
-    position: absolute;
-    width: 600px;
-    left: 83px;
-    top: 1000px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border: 3px solid #FFA07A;
-
-}
-
-.design-header {
-    position: absolute;
-    width: 591px;
-    height: 48px;
-    left: 770px;
-    /*top: 930px;*/
-    top: 1050px;
-
-    font-family: Noto Serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 48px;
-    /* identical to box height */
-    color: #000000;
-}
-
-.design-para {
-    position: absolute;
-    width: 568px;
-    height: 140px;
-    left: 745px;
-    /*top: 1050px;*/
-    top: 1200px;
-
-    font-family: Oxygen;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    line-height: 35px;
-    text-align: center;
-    display: inline-block;
-
-    color: #000000;
-}
-
-.horizontal-line {
-    position: absolute;
-    width: 292px;
-    height: 0px;
-    left: 884px;
-    /*top: 1000px;*/
-    top: 1135px;
-
-    border: 2px solid #F4976C;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transform: rotate(-0.2deg);
-}
+*/
 
 /* form-folder's style.css */
 
