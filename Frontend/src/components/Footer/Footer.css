@@ -1,68 +1,82 @@
  .main-footer {
-	bottom: 0;
-	padding-top: 10px;
-	width: 100%;
+    margin-top: 4rem;
+    width: 100%;
     height: 100%;
-	box-shadow: 0px 0px 25px rgb(207, 207, 207);
-	color: black;
-	background: #fbd9ad;
-
-    display: block;
-	padding: 10px;
-
-}
-
- .left-footer { 
-   margin-left: 5em;
-   float: left;
-   font-family: Oxygen;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 17px;
-
+    box-shadow: 0px 0px 25px rgb(207, 207, 207);
+    color: black;
+    background: #fbd9ad;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
  }
- .left-footer-rmi {
 
-   font-style: normal;
-   font-weight: bold;
-   font-family: Noto Serif;
-   font-size: 30px;
-   line-height: 54px;
-   letter-spacing: -0.05em;
-   color:#000000;
+ /* TODO: change to column in the laptop/desktop media queries */
+ .left-right-footer {
+     display: flex;
+     flex-direction: column-reverse;
+ }
 
+ .left-footer {
+    margin: 0 2rem;
+
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+ }
+ .left-footer--header {
+    display: none;
+
+     /* TODO: Move to media query */
+    font-style: normal;
+    font-weight: bold;
+    font-family: Noto Serif;
+    font-size: 30px;
+    line-height: 54px;
+    letter-spacing: -0.05em;
+    color:#000000;
+ }
+
+ .left-footer--items {
+     display: flex;
+     justify-content: space-around;
  }
 
  .right-footer {
-     float: right;
-     margin-right: 5em;
-     font-family: Oxygen;
-       font-style: normal;
-       font-weight: normal;
-       font-size: 17px;
+     margin: 0; /* Here to override random a margin-right that's being applied when it gets to laptop width or above */
+                /* Something in Home.css might be to blame? */
 
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
  }
 
- .right-footer-header {
-   font-style: normal;
-   font-weight: bold;
-   font-family: Noto Serif;
-   font-size:25px;
+ .right-footer--header {
+     display: none;
+
+     /* TODO: Move to media query */
+    font-style: normal;
+    font-weight: bold;
+    font-family: Noto Serif;
+    font-size:25px;
  }
 
- .linkedin {
-   margin-right: 18.5em;
-     float:right;
-     letter-spacing:normal;
+ .footer-email {
+    display: none;
  }
 
- .insta {
-     margin-right: 1em;
-     float: right;
-     letter-spacing:normal;
+ .footer-socials {
+    display: flex;
+     justify-content: center;
+ }
+
+ .social-icon {
+     flex-basis: 10%;
  }
  a {
    color: black;
    text-decoration: none;
    font-size: 15px;
 }
+
