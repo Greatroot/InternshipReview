@@ -210,12 +210,16 @@ function Search() {
 
                 <label>Internship Review:</label>
 
-                <input
-                    type="text"
-                    className="review-text"
-                    onChange={(event) => {
-                        setComments(event.target.value)
-                    }} />
+                {/* <span class='textarea' role='textbox' contenteditable> */}
+                    <input
+                        type="text"
+                        className="review-text"
+                        onChange={(event) => {
+                            setComments(event.target.value)
+                        }} />
+                {/* </span> */}
+
+
 
                 <br /><br /><br />
                 <div className="button-submit">

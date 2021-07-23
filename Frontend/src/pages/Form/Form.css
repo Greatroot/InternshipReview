@@ -29,9 +29,8 @@ hr {
     font-family: Noto Serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 2em;
-    text-align: left;
-    margin-left: 1em;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 .form-parameters label {
@@ -59,11 +58,13 @@ hr {
     border: .1em solid lightsalmon;
     margin-left: 2em;
     margin-right: 10%;
+    font-size: 1em;
 }
 
 .start-year {
     display: inline-block;
     border: .1em solid lightsalmon;
+    font-size: 1em;
 }
 
 .radio-label {
@@ -74,6 +75,20 @@ hr {
     display: inline-block;
     margin-right: 12%;
 }
+
+.textarea {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+  }
+  
+  .textarea[contenteditable]:empty::before {
+    content: "Your review here";
+    color: gray;
+  }
 
 .review-text {
     background-color: whitesmoke;
@@ -106,15 +121,17 @@ button {
     height: 40%;
     align-items: center;
     justify-content: center;
-    display: flex;
-    opacity: .8;
+    /* display: flex; */
+    display: none;
+    opacity: .9;
     flex-wrap: wrap;
+    z-index: 10000;
   }
 
   .popup {
       max-width: 80%;
       background: #fbe8a6;
-      border: 1.5px solid #ffa07a;
+      border: 3px solid #ffa07a;
       font-size: 1.3em;
       border-radius: 10px;
   }
@@ -124,6 +141,11 @@ button {
       font-family: Noto Serif;
   }
 
+  .confirmed {
+      padding-left: 1em;
+      padding-right: 1em;
+  }
+
   .exit-overlay {
       text-align: center;
   }
@@ -131,7 +153,88 @@ button {
   .btn-cancel {
       background: whitesmoke;
       margin-bottom: .2em;
+  } 
+
+
+  /* LAPTOP */
+  @media (min-width: 768px) {
+    .form-box {
+        margin-left: 10em;
+        margin-right: 10em;
+        margin-bottom: 3em;
+        padding-left: 2em;
+        padding-right: 1.5em;
+        height: 1100px;
+        border: 3px solid #ffa07a;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 12px;
+    }
+
+    .form-parameters label {
+        margin-left: 1.5em;
+        font-size: 1.3em;
+    }
+
+    .radio-label {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    .button-submit {
+        font-size: 1.2em;
+    }
+
+    .start-month {
+        font-size: 1.2em;
+    }
+
+    .start-year {
+        font-size: 1.2em;
+    }
   }
+
+
+  /* MONITORS */
+  @media (min-width: 1280px) {
+      .form-box {
+          height: 1200px;
+      }
+
+      .input-text {
+          width: 95%;
+      }
+
+      .review-text {
+          width: 95%;
+      }
+
+      .form-parameters label {
+        margin-left: 1.1em;
+        font-size: 1.8em;
+    }
+
+    .start-month {
+        margin-left: 1.5em;
+        margin-right: 5%;
+        font-size: 1.4em;
+    }
+
+    .start-year {
+        font-size: 1.4em;
+    }
+
+    .radio-label {
+        font-size: 1.5em;
+    }
+  }
+
 
 
 
