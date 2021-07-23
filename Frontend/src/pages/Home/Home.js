@@ -1,10 +1,12 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from "react";
+import ReactDOM from "react-dom";
+import "./Home.css";
 import DesignComponent from "./DesignComponent";
 import Footer from "../../components/Footer/Footer";
-import Image from "./Image.js"
+import Image from "./Image.js";
 import {IoSearchOutline} from "react-icons/all";
-import Search from "../../components/SearchBar/SearchBar.js"
+import SearchBar from "../../components/SearchBar/SearchBar.js";
+
 class Home extends React.Component {
     constructor() {
         super()
@@ -23,19 +25,20 @@ class Home extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="home-container">
                 <Image />
                  <form className="searchBar">
                     <p> Because Interning
                         Should Be Fun! </p>
-                    <input type = "text"
+                    {/* <input type = "text"
                            placeholder = "Search for an internship company"
                            name = "companyName"
                            value = {this.state.companyName}
                            onChange = {this.handleChange}
                            className="searchBar-input"
-                    />
-                    <IoSearchOutline className='search-icon'/>
+                    /> */}
+                    <SearchBar />
+                    {/* <IoSearchOutline className='search-icon'/> */}
                 </form>
                 <DesignComponent />
                 <Footer />

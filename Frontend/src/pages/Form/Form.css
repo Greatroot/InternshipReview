@@ -1,10 +1,150 @@
-body{
+html {
+    height: 100%
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.formButton {
+    display: none;
+}
+
+hr {
+    border: 2px solid #FFA07A;
+    margin-bottom: 3em;
+}
+
+.appName {
+    letter-spacing: .3em;
+    width: 100%;
+}
+
+.form-parameters {
+    width: auto;
+    box-sizing: border-box;
+}
+
+.form-header {
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 1em;
+}
+
+.form-parameters label {
+    margin-left: 2em;
+    font-size: 1em;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 200%;
+    display: block;
+}
+
+.input-text {
+    background-color: whitesmoke;
+    color: black;
+    box-sizing: border-box;
+    border: .1em solid lightsalmon;
+    display: block;
+    width: 85%;
+    margin-left: 2em;
+}
+
+.start-month {
+    display: inline-block;
+    border: .1em solid lightsalmon;
+    margin-left: 2em;
+    margin-right: 10%;
+}
+
+.start-year {
+    display: inline-block;
+    border: .1em solid lightsalmon;
+}
+
+.radio-label {
+    margin-left: 2em;
+}
+
+.radio-inline {
+    display: inline-block;
+    margin-right: 12%;
+}
+
+.review-text {
+    background-color: whitesmoke;
+    color: black;
+    box-sizing: border-box;
+    width: 85%;
+    height: 20%;
+    margin-left: 2em;
+    border: 1.5px solid lightsalmon;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #fbe8a6;
+    border-color: #ffa07a;
+    border-radius: 10px;
+}
+
+.button-submit {
+    text-align: center;
+}
+
+/* Confirmation Overlay */
+.overlay {
+    position: fixed;
+    width: 100%;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: .8;
+    flex-wrap: wrap;
+  }
+
+  .popup {
+      max-width: 80%;
+      background: #fbe8a6;
+      border: 1.5px solid #ffa07a;
+      font-size: 1.3em;
+      border-radius: 10px;
+  }
+
+  .popup h1, p {
+      text-align: center;
+      font-family: Noto Serif;
+  }
+
+  .exit-overlay {
+      text-align: center;
+  }
+
+  .btn-cancel {
+      background: whitesmoke;
+      margin-bottom: .2em;
+  }
+
+
+
+
+
+/*
+.body{
     background-color:rgba(255, 140, 8, 0.3);
 }
 .form-box {
     margin-left: 15em;
     margin-right: 15em;
-    /* width: auto; */
+    //width: auto;
     height: 1050px;
     border: 3px solid #fbd9ad;
     box-sizing: border-box;
@@ -53,12 +193,12 @@ body{
 .start-month {
     display: inline-block;
     padding-right: 7.7em;
-    /* border: 1px solid lightsalmon; */
+    //border: 1px solid lightsalmon;
 }
 
 .start-year {
     display: inline-block;
-    /* border: 2px solid lightsalmon; */
+    //border: 2px solid lightsalmon;
 }
 .form-parameters input[type = "radio"] {
     background-color: lightsalmon;
@@ -80,7 +220,7 @@ body{
     box-sizing: border-box;
     width: 700px;
     height: 300px;
-    /* padding: 150px; */
+    //padding: 150px;
     margin-left: 6em;
     border: 1px solid lightsalmon;
     border-radius: 10px;
@@ -94,4 +234,4 @@ input {
 .button-submit {
     color: #fbd9ad;
     margin-left: 28em;
-}
+} */
