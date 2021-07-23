@@ -18,24 +18,25 @@ function Footer() {
                     <div className="right-footer-header">
                         <p>Contact Us</p>
                     </div>
-                    <p> ratemyinternshipsofficial@gmail.com <p> 
+                    <p> ratemyinternshipsofficial@gmail.com </p>
                 </div>
-                        <br /> <br /> <br /><br />
-
-
-                        <div className="linkedin">
-                            <a href="https://www.linkedin.com/company/ratemyinternships/">
-                                < i class="fa fa-linkedin fa-2x"> </i>
-                            </a>
-                        </div>
-                        <div className="insta">
-                            <a href="https://www.instagram.com/ratemyinternships/?utm_medium=copy_link">
-                                < i class="fa fa-instagram fa-2x"></i>
-                            </a>
-                        </div>
-        </footer>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div className="linkedin">
+                    <a href="https://www.linkedin.com/company/ratemyinternships/">
+                        < i class="fa fa-linkedin fa-2x"> </i>
+                    </a>
                 </div>
-                )
+                <div className="insta">
+                    <a href="https://www.instagram.com/ratemyinternships/?utm_medium=copy_link">
+                        < i class="fa fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    )
 }
 
                 export default Footer;
