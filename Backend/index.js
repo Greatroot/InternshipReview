@@ -7,11 +7,20 @@ const cors = require('cors')
 app.use(cors());
 app.use(express.json());
 
+/* info for local database
 const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: 'password',
     database: 'internship_review',
+});*/
+
+//actual database
+const db = mysql.createConnection({
+    user: 'bcb45b2cf00546',
+    host: 'us-cdbr-east-04.cleardb.com',
+    password: '1cf42285',
+    database: 'heroku_3c7763526e153a6',
 });
 
 /* testing something - in theory it should work but it doesnt
@@ -29,7 +38,7 @@ app.put('/update', (req, res) => {
     const comments = req.body.comments
 
     db.query(
-        "UPDATE reviews SET comments = ? WHERE id = ?",
+        "UPDATE new_reviews SET comments = ? WHERE id = ?",
         [comments, id], 
         (err, result) => {
             if (err) {
@@ -45,7 +54,7 @@ app.delete("/delete/:id", (req, res) => {
     const id = req.params.id
 
     db.query(
-        "DELETE FROM reviews WHERE id = ?",
+        "DELETE FROM new_reviews WHERE id = ?",
         id,
         (err, result) => {
             if (err) {
@@ -58,7 +67,7 @@ app.delete("/delete/:id", (req, res) => {
 })
 
 app.get('/reviews', (req, res) => {
-    db.query("SELECT * FROM reviews", (err,result) => {
+    db.query("SELECT * FROM new_reviews", (err,result) => {
         if (err){
             console.log(err)
         } else {
@@ -74,15 +83,15 @@ app.post('/create', (req, res) => {
     const company = req.body.company;
     const position = req.body.position;
     const rating = req.body.rating;
-    const startMonth = req.body.startMonth;
-    const startYear = req.body.startYear;
-    const endMonth = req.body.endMonth;
-    const endYear = req.body.endYear
+    const start_month = req.body.start_month;
+    const start_year = req.body.start_year;
+    const end_month = req.body.end_month;
+    const end_year = req.body.end_year;
     const comments = req.body.comments;
 
     db.query(
-        "INSERT INTO reviews (company, position, rating, start, end, comments) VALUES (?, ?, ?, ?, ?, ?)", 
-        [company, position, rating, startMonth, startYear,endMonth,endYear, comments], 
+        "INSERT INTO new_reviews (company, position, rating, start_month, start_year, end_month, end_year, comments) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", 
+        [company, position, rating, start_month, start_year, end_month, end_year, comments], 
         (err, result) => {
             if (err) {
                 console.log(err)
