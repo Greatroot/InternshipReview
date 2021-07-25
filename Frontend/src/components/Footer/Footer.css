@@ -1,7 +1,7 @@
  .main-footer {
     margin-top: 4rem;
     width: 100%;
-    height: 100%;
+    height: 200px;
     box-shadow: 0px 0px 25px rgb(207, 207, 207);
     color: black;
     background: #fbd9ad;
@@ -26,15 +26,6 @@
  }
  .left-footer--header {
     display: none;
-
-     /* TODO: Move to media query */
-    font-style: normal;
-    font-weight: bold;
-    font-family: Noto Serif;
-    font-size: 30px;
-    line-height: 54px;
-    letter-spacing: -0.05em;
-    color:#000000;
  }
 
  .left-footer--items {
@@ -45,21 +36,10 @@
  .right-footer {
      margin: 0; /* Here to override random a margin-right that's being applied when it gets to laptop width or above */
                 /* Something in Home.css might be to blame? */
-
-    font-family: Oxygen;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
  }
 
  .right-footer--header {
      display: none;
-
-     /* TODO: Move to media query */
-    font-style: normal;
-    font-weight: bold;
-    font-family: Noto Serif;
-    font-size:25px;
  }
 
  .footer-email {
@@ -79,4 +59,76 @@
    text-decoration: none;
    font-size: 15px;
 }
+
+ .bottom-footer {
+
+ }
+
+ /* LAPTOP */
+ @media (min-width: 768px) {
+     .main-footer {
+         height: 400px;
+     }
+
+    .left-right-footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+     .left-footer--header {
+         display: inline;
+
+         font-style: normal;
+         font-weight: bold;
+         font-family: Noto Serif;
+         font-size: 30px;
+         line-height: 54px;
+         letter-spacing: -0.05em;
+         color:#000000;
+     }
+
+     .left-footer--items {
+         flex-direction: column;
+     }
+
+     .right-footer {
+
+         font-family: Oxygen;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 17px;
+     }
+
+     .right-footer--header {
+         display: inline;
+
+         font-style: normal;
+         font-weight: bold;
+         font-family: Noto Serif;
+         font-size:25px;
+     }
+
+     .footer-email {
+         display: inline;
+     }
+
+     /* TODO: Ask the team what they think about the vertical spacing */
+     .footer-socials {
+         margin-top: 1.5rem;
+         display: flex;
+         justify-content: center;
+     }
+
+     .social-icon {
+         margin-left: 0.5rem;
+     }
+
+ }
+
+ /* TODO: Ask the team what they think needs adding to the desktop version. */
+
+ /* MONITORS */
+ @media (min-width: 1280px) {
+
+ }
 
