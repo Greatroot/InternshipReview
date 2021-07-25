@@ -20,40 +20,52 @@ body {
     width: 10em;
 }
 
-/* not resizing rn */
-.formButton {
-    position: relative;
-    font-size: .3em;
-}
+/* BUTTON HAS DISAPPEARED WTFFFFFFFFFFF
+/* .btn--link {
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1em;
+    color: whitesmoke;
+    padding: 14px 20px;
+    border: 1px solid #ffa07a;
+    transition: all 0.3s ease-out;
+}  */
 
 img {
     max-width: 100%;
     position: relative;
 }
 
-.home-container {
-    background-color: #ffffff;
+.slogan {
+    height: 5%;
 }
 
-.searchBar {
-    background-color: #ffffff;
+.slogan h1 {
     position: relative;
-}
-
-.searchBar > p {
-    font-family: Noto serif;
-    font-size: 1em;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* position: relative; */
-    /* top: -15em; */
+    font-size: 1.5em;
+    font-family: Noto Serif;
     font-weight: bold;
-    text-transform: capitalize;
+    text-align: center;
+    top: -10em;
 }
 
-/* .searchBar-input {
+.slogan p {
+    position: relative;
+    font-size: 1em;
+    font-family: Noto Serif;
+    text-align: center;
+    top: -15em;
+}
+
+.search-icon {
+    position: relative;
+    margin-left: 80%;
+    top: -16.5em;
+}
+
+.searchBar-input {
     border: .2em solid #FFA07A;
     border-radius: 20px;
     background-color :whitesmoke;
@@ -61,38 +73,54 @@ img {
     display: flex; 
     padding: .5em;
     font-size: 1em;
-    width: 67%;
-    height: 1.8em;
-    top: -16em;
+    width: 70%;
+    height: 2em;
+    top: -15em;
     align-items: center;
     position: relative;
-} */
+}
 
-/* .searchBar-input:focus {
+.searchBar-input:focus {
     border-radius: 1px;
     outline: none;
-} */
-
-/* .search-icon {
-    font-size: .8em;
-    align-items: center;
-    display: flex;
-    position: relative;
-    top: -21.5em;
-    left: 80%;
-} */
+}
 
 ::placeholder  {
     font-family: Noto Serif;
     font-style: normal;
     font-weight: bold;
-    font-size: .8em;
+    font-size: 1em;
 }
+
+.design {
+    display: relative;
+    color: transparent;
+    height: 1%;
+    width: 1%;
+    opacity: 0.0;
+}
+
+.comp {
+    font-family: Noto Serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+}
+
+.design-header {
+    font-size: 1.5em;
+}
+
+hr {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
 
 
 /* Media Queries */
 /* LAPTOPS */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     html {
         height: 100%;
       }
@@ -108,7 +136,7 @@ img {
         overflow-x: hidden;
     }
     
-     header > h3 {   /* align website name and write a review together */
+     header > h3 {
         font-weight: normal;
         font-family: Noto Serif Bold;
         position: relative;
@@ -137,7 +165,7 @@ img {
         justify-content: center;
         align-items: center;
         position: relative;
-        /* top: -10em; */
+        // top: -10em; 
         font-weight: bold;
         text-transform: capitalize;
     }
@@ -165,7 +193,7 @@ img {
         font-size: 1.8em;
         align-items: center;
         display: flex;
-        /* position: relative; */
+        //position: relative;
         top: -17.9em;
         left: 80%;
     }
@@ -198,6 +226,7 @@ img {
         font-size: 1em;
     
     }
+
     .left-footer-rmi {
         font-style: normal;
         font-weight: bold;
@@ -222,9 +251,9 @@ img {
         font-weight: bold;
         font-family: Noto Serif;
         font-size: 2em;
-    }
+    } */
     
-    /* socials aren't floating right?? */
+    /* socials aren't floating right?? 
     .linkedin {
         margin-right: 18.5em;
         float:right;
@@ -236,7 +265,7 @@ img {
         float: right;
         letter-spacing:normal;
     }
-    /* ------------------------------------------------- */
+    /* ------------------------------------------------- 
 
     a {
         color: black;
@@ -261,7 +290,7 @@ img {
     }
     
     .design-header {
-        /*top: 1050px;*/
+        //top: 1050px;
         position: absolute;
         width: 15em;
         height: 5em;
@@ -271,12 +300,12 @@ img {
         font-style: normal;
         font-weight: bold;
         font-size: 2em;
-        /* identical to box height */
+        //identical to box height
         color: #000000;
     }
     
     .design-para {
-        /*top: 1200px;*/
+        //top: 1200px;
         position: absolute;
         width: 15em;
         height: 3em;
@@ -292,7 +321,7 @@ img {
     }
     
     .horizontal-line {
-        /*top: 1135px;*/
+        //top: 1135px;
         position: absolute;
         width: 20em;
         height: 0;
