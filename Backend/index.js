@@ -7,15 +7,6 @@ const cors = require('cors')
 app.use(cors());
 app.use(express.json());
 
-/* info for local database
-const db = mysql.createConnection({
-    user: 'root',
-    host: 'localhost',
-    password: 'password',
-    database: 'internship_review',
-});*/
-
-//actual database
 const db = mysql.createConnection({
     user: 'bcb45b2cf00546',
     host: 'us-cdbr-east-04.cleardb.com',
@@ -74,9 +65,6 @@ app.get('/reviews', (req, res) => {
             res.send(result)
         }
     })
-    // testing
-    // console.log("hi");
-    // res.json({message: "hello"});
 })
 
 app.post('/create', (req, res) => {
@@ -105,6 +93,3 @@ app.post('/create', (req, res) => {
 app.listen(process.env.PORT || PORT, () => {
     console.log("server running on port ${PORT}");
 }); 
-// app.listen(PORT, () => {
-//     console.log(`Server listening on ${PORT}`);
-//   });
