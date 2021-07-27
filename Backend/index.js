@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 );*/
 
 app.get("/", (req, res) => {
-        res.send('testing');
+        res.send('testing2');
     }
 );
 
