@@ -25,9 +25,11 @@ app.get("/", (req, res) => {
 );*/
 
 app.get("/", (req, res) => {
-        res.send('Hello World!!');
+        res.send('testing');
     }
 );
+
+// using -am instead of m?
 
 app.put('/update', (req, res) => {
     const id = req.body.id
