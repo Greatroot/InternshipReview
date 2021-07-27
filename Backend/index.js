@@ -24,6 +24,11 @@ app.get("/", (req, res) => {
     }
 );*/
 
+app.get("/", (req, res) => {
+        res.send('Hello World!');
+    }
+);
+
 app.put('/update', (req, res) => {
     const id = req.body.id
     const comments = req.body.comments
