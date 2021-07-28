@@ -10,7 +10,7 @@ app.use(express.json());
 const db = mysql.createConnection({
     user: 'bcb45b2cf00546',
     host: 'us-cdbr-east-04.cleardb.com',
-    password: '1cf42285',
+    password: 'totallywrongpassword',
     database: 'heroku_3c7763526e153a6',
 });
 
@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 );*/
 
 app.get("/", (req, res) => {
-        res.send('testing');
+        res.send('testing2');
     }
 );
 
