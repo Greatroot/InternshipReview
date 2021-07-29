@@ -77,9 +77,7 @@ const Header = ({ bottomBorder }) => {
                     {/*</div>*/}
                     <ul className='nav-btn'>
                         <Link to="/add-internship" className='btn-link'>
-                            <div className='formButton'>
                             <Button buttonStyle="btn--outline"> Rate an Internship </Button>
-                            </div>
                         </Link>
 
                         {/* ******* Everything below is the log in and sign up buttons for authentication *******
