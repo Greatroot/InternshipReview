@@ -110,6 +110,7 @@ img {
 
 .design-header {
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 hr {
@@ -145,46 +146,34 @@ hr {
     }
 
     .search-icon {
-        top: -25.5em;
+        top: -25.6em;
         margin-left: 81.5%;
     }
 
     ::placeholder {
         font-size: 1.3em;
     }
-
-    
-
-    /* 
-    a {
-        color: black;
-        text-decoration: none;
-        font-size: 1em;
-    }
     
     .comp {
-        height: 40em;
+        height: 27em;
         width: 100%;
-        background: white;
     }
-    
+
     .design {
         position: relative;
-        width: 50%;
-        left: 5em;
-        top: 5em;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        opacity: 1.0;
+        width: 45%;
+        height: 25rem;
+        top: -16em;
+        filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.5));
         padding: none;
-        border: .3em solid #FFA07A;    
     }
-    
+
     .design-header {
-        position: absolute;
-        width: 15em;
-        height: 5em;
-        margin-left: 24em;
-        top: 36em;
-        font-family: Noto Serif;
+        width: 40%;
+        height: 3em;
+        top: 1em;
+        margin-left: 47%;
         font-style: normal;
         font-weight: bold;
         font-size: 2em;
@@ -192,35 +181,75 @@ hr {
     }
     
     .design-para {
-        position: absolute;
-        width: 15em;
+        width: 40%;
         height: 3em;
-        margin-left: 24em;
-        top: 40em;
+        margin-left: 40%;
+        margin-right: 5%;
+        margin-top: 1em;
         font-family: Oxygen;
         font-style: normal;
         font-weight: normal;
-        font-size: 2em;
+        font-size: 1.7em;
         text-align: center;
         display: inline-block;
         color: #000000;
     }
     
     .horizontal-line {
-        position: absolute;
-        width: 20em;
-        height: 0;
-        margin-left: 54em;
-        top: 77em;
+        width: 25%;
+        margin-left: 55%;
+        margin-right: 5%;
         border: 2px solid #F4976C;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transform: rotate(-0.2deg);
-    } */
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    }
 }
 
-/*
-MONITORS
-@media (min-width: 992px) {
 
+
+/* MONITORS */
+@media (min-width: 1280px) {
+    .slogan h1 {
+        font-size: 3em;
+    }
+
+    .searchBar-input {
+        top: -35em;
+        height: 2.5em;
+    }
+
+    .search-icon {
+        top: -36.5em;
+        margin-left: 82%;
+    }
+
+    ::placeholder {
+        font-size: 1.7em;
+    }
+
+    .comp {
+        height: 45em;
+    }
+
+    .design {
+        position: relative;
+        width: 45%;
+        height: 50rem;
+        top: -25em;
+        filter: drop-shadow(0px 50px 50px rgba(0, 0, 0, 0.5));
+    }
+
+    .design-header {
+        font-size: 2.8em;
+        margin-top: 2.5em;
+        height: 4.5em;
+    }
+    
+    .design-para {
+        font-size: 2.2em;
+        margin-top: 2.5em;
+    }
+
+    .horizontal-line {
+        box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    }
 }
-*/

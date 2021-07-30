@@ -158,6 +158,10 @@ button {
 
   /* LAPTOP */
   @media (min-width: 768px) {
+    hr {
+        display: none;
+    }
+
     .form-box {
         margin-left: 10em;
         margin-right: 10em;
