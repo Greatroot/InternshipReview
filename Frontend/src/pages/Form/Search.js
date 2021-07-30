@@ -56,7 +56,7 @@ function Search() {
                     onChange={(event) => {
                         setCompany(event.target.value)
                     }}
-                />
+                required/>
                 <br />
 
                 <label>Internship Start Date:</label>
@@ -67,7 +67,7 @@ function Search() {
                         onChange={(event) => {
                             setStartMonth(event.target.value)
                         }}
-                    >
+                        required>
                         <option value="">Month</option>
                         <option value="1"> January</option>
                         <option value="2">February </option>
@@ -90,7 +90,7 @@ function Search() {
                         onChange={(event) => {
                             setStartYear(event.target.value)
                         }}
-                    >
+                        required>
                         <option value="">Year</option>
                         <option value="2016"> 2016</option>
                         <option value="2017">2017 </option>
@@ -109,7 +109,7 @@ function Search() {
                         onChange={(event) => {
                             setEndMonth(event.target.value)
                         }}
-                    >
+                        required>
                         <option value="">Month</option>
                         <option value="1"> January</option>
                         <option value="2">February </option>
@@ -132,7 +132,7 @@ function Search() {
                         onChange={(event) => {
                             setEndYear(event.target.value)
                         }}
-                    >
+                        required>
                         <option value="">Year</option>
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
@@ -151,7 +151,7 @@ function Search() {
                     onChange={(event) => {
                         setPosition(event.target.value)
                     }}
-                />
+                    required/>
                 <br /><br />
 
                 <label>Internship Rating:</label>
@@ -165,7 +165,7 @@ function Search() {
                             onChange={(event) => {
                                 setRating(event.target.value)
                             }}
-                        /> 1</div>
+                            required/> 1</div>
 
                     <div class="radio-inline">
                         <input
@@ -216,7 +216,7 @@ function Search() {
                         className="review-text"
                         onChange={(event) => {
                             setComments(event.target.value)
-                        }} />
+                        }} required/>
                 {/* </span> */}
 
 
