@@ -15,7 +15,7 @@ function Search() {
     const [reviewList, setReviewList] = useState([]);
 
 
-    const addReview = () => {
+    const addReview = (event) => {
         Axios.post('https://internship-review-backend.herokuapp.com/create', {
 
             company: company,
@@ -209,33 +209,22 @@ function Search() {
                 <br /><br />
 
                 <label>Internship Review:</label>
-
                     <textarea maxlength='400' placeholder='Your review here...' autofocus>
                         <input
                         type="text"
-                        className="review-text"
+                        className="input-text"
                         onChange={(event) => {
                             setComments(event.target.value)
                         }} required/>
                     </textarea>
                     <br />
                     <div className='word-counter'>
-                        <span id='current'>0</span>
-                        <span id='max-characters'>/400</span>
+                        <span id='max-characters'>400 Characters Max</span>
                     </div>
-
-                    {/* $('textarea').keyup(function() {
-    
-    characterCount = $(this).val().length,
-        current = $('#current'),
-        maximum = $('#maximum'),
-        theCount = $('#the-count');
-      
-    current.text(characterCount); */}
 
                 <br /><br /><br />
                 <div className="button-submit">
-                    <button
+                    <button className='submit-review'
                         onClick={addReview}
                     >Add Review</button>
                 </div>
