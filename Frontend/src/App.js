@@ -20,6 +20,8 @@ function App() {
     });
  }, []);
 
+    //IMPORTANT: Be sure to not put the Header in App.js. There are different versions of the header, so it's better to put the header
+    // in separately for each page.
     return (
         <BrowserRouter>
         <Header />

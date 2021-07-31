@@ -210,16 +210,28 @@ function Search() {
 
                 <label>Internship Review:</label>
 
-                {/* <span class='textarea' role='textbox' contenteditable> */}
-                    <input
+                    <textarea maxlength='400' placeholder='Your review here...' autofocus>
+                        <input
                         type="text"
                         className="review-text"
                         onChange={(event) => {
                             setComments(event.target.value)
                         }} required/>
-                {/* </span> */}
+                    </textarea>
+                    <br />
+                    <div className='word-counter'>
+                        <span id='current'>0</span>
+                        <span id='max-characters'>/400</span>
+                    </div>
 
-
+                    {/* $('textarea').keyup(function() {
+    
+    characterCount = $(this).val().length,
+        current = $('#current'),
+        maximum = $('#maximum'),
+        theCount = $('#the-count');
+      
+    current.text(characterCount); */}
 
                 <br /><br /><br />
                 <div className="button-submit">
