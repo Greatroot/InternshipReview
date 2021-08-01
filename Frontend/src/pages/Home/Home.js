@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./Home.css";
 import DesignComponent from "./DesignComponent";
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Image from "./Image.js";
 import { IoSearchOutline } from "react-icons/all";
@@ -28,6 +29,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home-container">
+                <Header />
                 <Image />
                 <form className="searchBar">
                     <div className='slogan'>

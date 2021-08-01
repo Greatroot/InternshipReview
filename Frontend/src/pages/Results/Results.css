@@ -12,6 +12,7 @@
 .searchBar-container {
     display: flex;
     justify-content: center;
+    margin-top: 5rem;
 }
 
 .search-term {

@@ -63,8 +63,8 @@ const Header = ({ bottomBorder }) => {
 
         // Ben's code:
         <>
-            <nav className="navbar">
-                <div className={`navbar-container container ${bottomBorder ? "bottom-border" : ""}`}>
+            <nav className={`navbar ${bottomBorder ? "bottom-border" : ""}`}>
+                <div className="navbar-container container">
                     <Link to='/' className="navbar-logo">
                             Rate My Internships
                     </Link>

@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f36317-8731-4b3e-8928-600c6b50f996" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form/Form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Results/Results.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Results/Results.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Results/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Results/Results.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <workItem from="1626416936989" duration="4343000" />
       <workItem from="1627250472643" duration="14475000" />
       <workItem from="1627778417690" duration="878000" />
-      <workItem from="1627781153085" duration="6701000" />
+      <workItem from="1627781153085" duration="12103000" />
     </task>
     <servers />
   </component>

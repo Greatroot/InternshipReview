@@ -25,6 +25,10 @@
     padding-left: 50px;
 }
 
+.bottom-border {
+    border-bottom: 2px solid #EF7B45;
+}
+
 /*.navbar-icon {*/
 /*    margin-right: 0.5rem;*/
 /*}*/

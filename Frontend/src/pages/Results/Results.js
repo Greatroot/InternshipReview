@@ -30,8 +30,8 @@ const Results = () => {
                     <SearchBar type = "text"
                                placeholder = "Search for an internship company"
                                name = "companyName"
-                               value = {input}
-                               onChange = {handleChange}
+                               value = { input }
+                               onChange = { handleChange }
                     />
                 </div>
                 <div className="search-term">

@@ -24,7 +24,6 @@ function App() {
     // in separately for each page.
     return (
         <BrowserRouter>
-        <Header />
             <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/add-internship' component={Form}/>

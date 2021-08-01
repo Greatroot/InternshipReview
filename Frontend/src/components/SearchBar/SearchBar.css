@@ -1,4 +1,6 @@
 .search-bar {
+    flex-direction: row-reverse;
+
     margin: auto;
     padding: .5em;
     font-size: 1em;
@@ -6,19 +8,19 @@
     border: .2em solid #FFA07A;
     border-radius: 20px;
     background-color: whitesmoke;
-    width: 67%;
-    height: 1.8em;
+    width: 80%;
+    height: 3rem;
     align-items: center;
 }
 
 .search-bar--input {
-    margin: auto;
+    /*margin: auto;*/
     border: none;
     background-color: transparent;
-    padding: 10px;
-    font-size: 17px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
     flex: 9;
-    align-self: flex-start;
+    /*align-self: flex-start;*/
 }
 
 /* TODO: Figure out what we want to happen when search bar is clicked. */
