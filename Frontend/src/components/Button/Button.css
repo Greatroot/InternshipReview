@@ -1,5 +1,6 @@
 :root {
-    --primary: #fff; /* Global CSS variables */
+    --primary: #fbe7a6; /* Global CSS variables */
+    --secondary: #F4976C;
 }
 
 .btn {
@@ -14,14 +15,22 @@
 .btn--primary {
     background-color: var(--primary);
     color: #242424;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
 }
 
 .btn--outline {
     background-color: transparent;
     padding: 8px 20px;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
     transition: all 0.3s ease-out;
+}
+
+.btn--shadow {
+    background-color: transparent;
+    padding: 8px 20px;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 0px 25px rgb(207, 207, 207);
 }
 
 .btn--medium {

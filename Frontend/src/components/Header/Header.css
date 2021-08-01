@@ -2,9 +2,8 @@
     background: #fff;
     height: 80px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
+    /*justify-content: center;*/
+    /*align-items: center;*/
     position: sticky;
     top: 0;
     z-index: 999;
@@ -26,12 +25,16 @@
     padding-left: 50px;
 }
 
+/*.navbar-icon {*/
+/*    margin-right: 0.5rem;*/
+/*}*/
+
 .navbar-logo {
     color: #000000;
-    justify-self: start;
+    justify-self: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
     font-family: Noto Serif;
@@ -39,50 +42,64 @@
     font-weight: bold;
     line-height: 68px;
     letter-spacing: -0.05em;
+    flex: 1;
 }
 
-.navbar-icon {
-    margin-right: 0.5rem;
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    text-align: center;
-    /*justify-content: end;*/
-}
-
-.nav-item {
-    height: 80px;
-    border-bottom: 2px solid transparent;
-}
-
-.nav-item:hover {
-    border-bottom: 2px solid #f00946;
-}
-
-.nav-links {
-    color: #000000;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    height: 100%;
-}
-
-.fa-bars {
-    color: #000000;
-}
-
-.menu-icon {
+.nav-btn {
     display: none;
 }
 
-.bottom-border {
-    border-bottom: 2px solid #EF7B45;
+/* LAPTOP & MONITOR (both are the same) */
+@media (min-width: 768px) {
+   .nav-btn {
+       display: inline;
+   }
+
+   .navbar-logo {
+       justify-self: start;
+   }
 }
+
+/*.nav-btn {*/
+/*    box-shadow: 0px 0px 25px rgb(207, 207, 207);*/
+/*}*/
+
+/* Everything below is also a remnant of the hamburger menu? */
+
+/*.nav-menu {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    list-style: none;*/
+/*    text-align: center;*/
+/*    !*justify-content: end;*!*/
+/*}*/
+
+/*.nav-item {*/
+/*    height: 80px;*/
+/*    border-bottom: 2px solid transparent;*/
+/*}*/
+
+/*.nav-item:hover {*/
+/*    border-bottom: 2px solid #f00946;*/
+/*}*/
+
+/*.nav-links {*/
+/*    color: #000000;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    text-decoration: none;*/
+/*    padding: 0.5rem 1rem;*/
+/*    height: 100%;*/
+/*}*/
+
+/*.fa-bars {*/
+/*    color: #000000;*/
+/*}*/
+
+/*.menu-icon {*/
+/*    display: none;*/
+/*}*/
 
 /*TODO: Everything below is a remnant of the hamburger button and the responsiveness of the header. Need to
   remove or modify later on. */

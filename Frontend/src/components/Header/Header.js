@@ -66,18 +66,15 @@ const Header = ({ bottomBorder }) => {
             <nav className="navbar">
                 <div className={`navbar-container container ${bottomBorder ? "bottom-border" : ""}`}>
                     <Link to='/' className="navbar-logo">
-                        <div className='appName'>
                             Rate My Internships
-                        </div>
-                        
                     </Link>
                     {/*TODO: Remove if the hamburger menu never gets used*/}
                     {/*<div className="menu-icon" onClick={handleClick} >*/}
                     {/*    {click ? <FaTimes /> : <FaBars /> }*/}
                     {/*</div>*/}
-                    <ul className='nav-btn'>
+                    <div className='nav-btn'>
                         <Link to="/add-internship" className='btn-link'>
-                            <Button buttonStyle="btn--outline"> Rate an Internship </Button>
+                            <Button buttonStyle="btn--shadow"> Rate an Internship </Button>
                         </Link>
 
                         {/* ******* Everything below is the log in and sign up buttons for authentication *******
@@ -115,7 +112,7 @@ const Header = ({ bottomBorder }) => {
                         {/*        </Link>*/}
                         {/*    )}*/}
                         {/*</li>*/}
-                    </ul>
+                    </div>
                 </div>
             </nav>
         </>

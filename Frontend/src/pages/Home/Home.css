@@ -16,8 +16,9 @@ body {
 
 .appName {
     position: absolute;
+    letter-spacing: .3em;
     font-size: .5em;
-    width: 10em;
+    width: 30%;
 }
 
 /* BUTTON HAS DISAPPEARED WTFFFFFFFFFFF */
