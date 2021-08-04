@@ -11,35 +11,34 @@ function Search() {
     const [endMonth, setEndMonth] = useState(0);
     const [endYear, setEndYear] = useState(0);
     const [comments, setComments] = useState("");
-    const [newComment, setNewComment] = useState("")
+    //const [newComment, setNewComment] = useState("") this is not needed for now
     const [reviewList, setReviewList] = useState([]);
 
 
-    const addReview = (event) => {
+    const addReview = () => {
         Axios.post('https://internship-review-backend.herokuapp.com/create', {
-
-            company: company,
-            position: position,
-            rating: rating,
-            startMonth: startMonth,
-            startYear: startYear,
-            endMonth: endMonth,
-            endYear: endYear,
-            comments: comments,
+          company: company, 
+          position: position, 
+          rating: rating,
+          start_month: startMonth,
+          start_year: startYear,
+          end_month: endMonth,
+          end_year: endYear,
+          comments: comments,
         }).then((() => {
-            console.log("success");
-            setReviewList([
-                ...reviewList, {
-                    company: company,
-                    position: position,
-                    rating: rating,
-                    startMonth: startMonth,
-                    startYear: startYear,
-                    endMonth: endMonth,
-                    endYear: endYear,
-                    comments: comments,
-                },
-            ]);
+          console.log("success");
+          setReviewList([
+            ...reviewList, {
+              company: company, 
+              position: position, 
+              rating: rating,
+              start_month: startMonth,
+              start_year: startYear,
+              end_month: endMonth,
+              end_year: endYear,
+              comments: comments,
+            },
+          ]);
         }))
     };
 
