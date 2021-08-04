@@ -47,7 +47,7 @@ function Search() {
             <div className="form-header">
                 <p> Write a Review </p>
             </div>
-            <form>
+            <form onSubmit='return false;'>
                 <label>Name of Company:</label>
                 <input
                     type="text"
