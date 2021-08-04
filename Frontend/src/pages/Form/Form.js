@@ -1,7 +1,7 @@
 import React from "react"
 import Search from "./Search"
-import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
+import { Link } from 'react-router-dom';
 import "./Form.css"
 import { useState, Button, Modal } from "react";
 
@@ -10,6 +10,11 @@ import { useState, Button, Modal } from "react";
 function app() {
     return (
         <div>
+          <div className="navbar-container container">
+                    <Link to='/' className="navbar-logo">
+                            Rate My Internships
+                    </Link>
+          </div>
             <hr></hr>
             <div className="form-box">
                 <Search />

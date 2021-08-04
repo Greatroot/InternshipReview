@@ -45,13 +45,10 @@ class Home extends React.Component {
                         />
                         <IoSearchOutline className='search-icon' />
                         <p>OR</p>
-                        <div className='nav-btn'>
-                            <p>Button disappeared??</p>
-                            <Link to="/add-internship" className='btn-link'>
-                                <div className='formButton'>
-                                    <Button buttonStyle="btn--outline"> Rate an Internship </Button>
-                                </div>
-                            </Link>
+                        <div className='mobile-nav-btn'>
+                        <Link to="/add-internship" className='btn-link'>
+                            <Button buttonStyle="btn--shadow"> Rate an Internship </Button>
+                        </Link>
                         </div>
                     </div>
                     {/* <SearchBar /> */}

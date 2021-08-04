@@ -164,7 +164,8 @@ textarea {
   /* LAPTOP */
   @media (min-width: 768px) {
     hr {
-        display: none;
+        border: 2px solid #FFA07A;
+        margin-bottom: 3em;
     }
 
     .form-box {
