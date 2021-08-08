@@ -164,7 +164,7 @@ function Search() {
                             onChange={(event) => {
                                 setRating(event.target.value)
                             }}
-                            required/> 1</div>
+                            required /> 1</div>
 
                     <div class="radio-inline">
                         <input
@@ -174,7 +174,7 @@ function Search() {
                             checked={rating === "twoStar"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} /> 2</div>
+                            }} required/> 2</div>
                     <div class="radio-inline">
                         <input
                             type="radio"
@@ -183,7 +183,7 @@ function Search() {
                             checked={rating === "threeStar"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} /> 3</div>
+                            }} requuired/> 3</div>
 
                     <div class="radio-inline">
                         <input
@@ -193,7 +193,7 @@ function Search() {
                             checked={rating === "fourStar"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} /> 4</div>
+                            }} required/> 4</div>
 
                     <div class="radio-inline">
                         <input
@@ -203,18 +203,20 @@ function Search() {
                             checked={rating === "fiveStar"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} /> 5</div>
+                            }} required/> 5</div> 
                 </div>
                 <br /><br />
 
                 <label>Internship Review:</label>
-                    <textarea maxLength='400' placeholder='Your review here...' autoFocus>
-                        <input
-                        type="text"
+                    <textarea type='text' className="input-text" 
+                    onChange={(event) => {
+                        setComments(event.target.value)
+                    }}maxLength='400' placeholder='Your review here...' autoFocus>
+                        {/* type="text"
                         className="input-text"
                         onChange={(event) => {
                             setComments(event.target.value)
-                        }} required/>
+                        }} required/> */}
                     </textarea>
                     <br />
                     <div className='word-counter'>
@@ -222,8 +224,9 @@ function Search() {
                     </div>
 
                 <br /><br /><br />
+                </form>
                   <button className='submit-review' onClick={addReview}>Add Review</button>
-            </form>
+            
         </div>
     )
 }

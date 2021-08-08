@@ -14,7 +14,7 @@ const db = mysql.createConnection({
     database: 'heroku_3c7763526e153a6',
 });
 
-/* testing something - in theory it should work but it doesnt
+//testing something - in theory it should work but it doesnt
 app.get("/", (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*")
     res.setHeader("Access-Control-Allow-Credentials", "true");
@@ -22,12 +22,12 @@ app.get("/", (req, res) => {
     res.setHeader("Access-Control-Allow-Headers", "content-type");
     res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
     }
-);*/
+);
 
-app.get("/", (req, res) => {
+/*app.get("/", (req, res) => {
         res.send('testing3');
     }
-);
+);*/
 
 // using -am instead of m?
 
