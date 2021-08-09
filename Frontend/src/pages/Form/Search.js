@@ -208,13 +208,12 @@ function Search() {
                 <br /><br />
 
                 <label>Internship Review:</label>
-                    <textarea maxlength='400' placeholder='Your review here...' autofocus>
-                        <input
-                        type="text"
+                    <textarea type="text"
                         className="input-text"
                         onChange={(event) => {
-                            setComments(event.target.value)
-                        }} required/>
+                            setComments(event.target.value)}}
+                            maxlength='400' placeholder='Your review here...' autofocus
+                            required>
                     </textarea>
                     <br />
                     <div className='word-counter'>
