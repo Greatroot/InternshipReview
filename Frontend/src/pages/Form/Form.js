@@ -11,6 +11,7 @@ function app() {
     return (
         <div>
           <div className="navbar-container container">
+          <div className='icon'></div>
                     <Link to='/' className="navbar-logo">
                             Rate My Internships
                     </Link>

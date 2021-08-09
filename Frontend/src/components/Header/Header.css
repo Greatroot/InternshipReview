@@ -1,3 +1,11 @@
+.icon {
+    background: url('../../RMI_Logo.png');
+    background-repeat: no-repeat;
+    height: 5em;
+    width: 5em;
+    display: inline;
+}
+
 .navbar {
     background: #fff;
     height: 80px;
@@ -29,11 +37,9 @@
     border-bottom: 2px solid #EF7B45;
 }
 
-/*.navbar-icon {*/
-/*    margin-right: 0.5rem;*/
-/*}*/
-
 .navbar-logo {
+    position: absolute;
+    margin-left: 3em;
     color: #000000;
     justify-self: center;
     cursor: pointer;
