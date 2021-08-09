@@ -4,8 +4,8 @@ const app = express()
 const mysql = require('mysql')
 const cors = require('cors')
 
-app.use(cors());
 app.use(express.json());
+app.use(cors())
 
 const db = mysql.createConnection({
     user: 'bcb45b2cf00546',
@@ -14,15 +14,11 @@ const db = mysql.createConnection({
     database: 'heroku_3c7763526e153a6',
 });
 
-/* testing something - in theory it should work but it doesnt
-app.get("/", (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*")
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Max-Age", "1800");
-    res.setHeader("Access-Control-Allow-Headers", "content-type");
-    res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
-    }
-);*/
+app.all('/', cors(), function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next()
+  });
 
 app.get("/", (req, res) => {
         res.send('testing2');
@@ -31,7 +27,7 @@ app.get("/", (req, res) => {
 
 // using -am instead of m?
 
-app.put('/update', (req, res) => {
+app.put('/update', cors(),(req, res) => {
     const id = req.body.id
     const comments = req.body.comments
 
@@ -64,7 +60,7 @@ app.delete("/delete/:id", (req, res) => {
     )
 })
 
-app.get('/reviews', (req, res) => {
+app.get('/reviews', cors(),(req, res) => {
     db.query("SELECT * FROM new_reviews", (err,result) => {
         if (err){
             console.log(err)
@@ -74,7 +70,7 @@ app.get('/reviews', (req, res) => {
     })
 })
 
-app.post('/create', (req, res) => {
+app.post('/create', cors(),(req, res) => {
     const company = req.body.company;
     const position = req.body.position;
     const rating = req.body.rating;
