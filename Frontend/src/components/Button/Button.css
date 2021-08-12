@@ -108,6 +108,17 @@
     border: none;
 }
 
+.whitesmoke {
+    background-color: whitesmoke;
+    border-color: #FFA07A;
+}
+
+.whitesmoke:hover {
+    background-color: #fbe7a6;
+    color: #F4976C;
+    border: none;
+}
+
 .black {
     background-color: #242424;
     color: #fff;

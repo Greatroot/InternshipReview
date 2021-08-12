@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Axios from 'axios'
 
-function Search() {
+const Search = ({ show, setShow }) => {
 
     const [company, setCompany] = useState("");
     const [position, setPosition] = useState("");
@@ -13,7 +13,6 @@ function Search() {
     const [comments, setComments] = useState("");
     //const [newComment, setNewComment] = useState("") this is not needed for now
     const [reviewList, setReviewList] = useState([]);
-
 
     const addReview = () => {
         Axios.post('https://internship-review-backend.herokuapp.com/create', {
@@ -40,6 +39,8 @@ function Search() {
             },
           ]);
         }))
+
+        setShow(true);
     };
 
     return (
@@ -224,7 +225,7 @@ function Search() {
                 <br /><br /><br />
                 <div className="button-submit">
                     <button className='submit-review'
-                        onClick={addReview}
+                        onClick={ addReview }
                     >Add Review</button>
                 </div>
             </form>

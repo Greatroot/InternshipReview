@@ -1,0 +1,119 @@
+/* Confirmation Overlay */
+
+.modal {
+    position: fixed;
+    width: 100%;
+    top: 20%;
+    left: 10%;
+    /*width: 80%;*/
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    /*display: none;*/
+    opacity: .9;
+    flex-wrap: wrap;
+    z-index: 10000;
+}
+
+.popup {
+    max-width: 80%;
+    background: #fbe8a6;
+    border: 3px solid #ffa07a;
+    font-size: 1.3em;
+    border-radius: 10px;
+}
+
+.popup h1, p {
+    text-align: center;
+    font-family: Noto Serif;
+}
+
+.confirmed {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* LAPTOP */
+@media (min-width: 768px) {
+    hr {
+        border: 2px solid #FFA07A;
+        margin-bottom: 3em;
+    }
+
+    .form-box {
+        margin-left: 10em;
+        margin-right: 10em;
+        margin-bottom: 3em;
+        padding-left: 2em;
+        padding-right: 1.5em;
+        height: 1100px;
+        border: 3px solid #ffa07a;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 12px;
+    }
+
+    .form-parameters label {
+        margin-left: 1.5em;
+        font-size: 1.3em;
+    }
+
+    .radio-label {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    .button-submit {
+        font-size: 1.2em;
+    }
+
+    .start-month {
+        font-size: 1.2em;
+    }
+
+    .start-year {
+        font-size: 1.2em;
+    }
+}
+
+
+/* MONITORS */
+@media (min-width: 1280px) {
+    .form-box {
+        height: 1200px;
+    }
+
+    .input-text {
+        width: 95%;
+    }
+
+    .review-text {
+        width: 95%;
+    }
+
+    .form-parameters label {
+        margin-left: 1.1em;
+        font-size: 1.8em;
+    }
+
+    .start-month {
+        margin-left: 1.5em;
+        margin-right: 5%;
+        font-size: 1.4em;
+    }
+
+    .start-year {
+        font-size: 1.4em;
+    }
+
+    .radio-label {
+        font-size: 1.5em;
+    }
+}
