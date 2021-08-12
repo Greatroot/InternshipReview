@@ -1,3 +1,13 @@
+.icon {
+    background: url('../../RMI_Logo.png');
+    background-repeat: no-repeat;
+    margin-left: 1.5em;
+    margin-top: .8em;
+    height: 5em;
+    width: 5em;
+    display: inline;
+}
+
 html {
     height: 100%;
 }
@@ -157,6 +167,12 @@ textarea {
         padding-right: 1em;
         padding-top: .5em;
         padding-bottom: .5em;
+        box-shadow: 0 0.5em 0.5em -0.6em
+    }
+
+    button:hover {
+        background: whitesmoke;
+        box-shadow: 0 0.5em 0.5em -0.4em;
     }
 
     .button-submit {

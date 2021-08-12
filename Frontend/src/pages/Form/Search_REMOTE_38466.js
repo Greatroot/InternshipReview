@@ -236,11 +236,8 @@
 
 import React, { useState } from "react"
 import Axios from 'axios'
-import Modal from "../../components/Modal/Modal";
-import { Button } from '../../components/Button/Button';
-import { Link } from 'react-router-dom';
 
-const Search = () => {
+function Search() {
 
     const [company, setCompany] = useState("");
     const [position, setPosition] = useState("");
@@ -253,66 +250,32 @@ const Search = () => {
     const [newComment, setNewComment] = useState("")
     const [reviewList, setReviewList] = useState([]);
 
-    // True if the submit button was clicked and the modal is showing.
-    // False if submit button has not been clicked.
-    const [show, setShow] = useState(false);
-
-    // The cancel button on the modal
-    const actions = (
-        <div className="btn-close">
-            <Link to="/">
-                <Button buttonStyle='btn-outline' buttonSize='btn-medium' buttonColor='whitesmoke'>
-                    Close
-                </Button>
-            </Link>
-        </div>
-    );
-
-    // Handles removing modal when user hits close button.
-    const onClose = () => {
-        setShow(false);
-    }
 
     const addReview = () => {
-        Axios.post('https://internship-review-backend.herokuapp.com/create', {
-            company: company,
-            position: position,
+      Axios.post('https://internship-review-backend.herokuapp.com/create', {
+        company: company, 
+        position: position, 
+        rating: rating,
+        start_month: startMonth,
+        start_year: startYear,
+        end_month: endMonth,
+        end_year: endYear,
+        comments: comments,
+      }).then((() => {
+        console.log("success");
+        setReviewList([
+          ...reviewList, {
+            company: company, 
+            position: position, 
             rating: rating,
             start_month: startMonth,
             start_year: startYear,
             end_month: endMonth,
             end_year: endYear,
             comments: comments,
-        }).then((() => {
-            console.log("success");
-            setReviewList([
-                ...reviewList, {
-                    company: company,
-                    position: position,
-                    rating: rating,
-                    start_month: startMonth,
-                    start_year: startYear,
-                    end_month: endMonth,
-                    end_year: endYear,
-                    comments: comments,
-                },
-            ]);
-        }))
-
-        if(
-            company !== "" &&
-            position !== "" &&
-            rating !== 0 &&
-            startMonth !== 0 &&
-            startYear !== 0 &&
-            endMonth !== 0 &&
-            endYear !== 0 &&
-            comments !== "" &&
-            newComment !== "" &&
-            reviewList !== ""
-        ) {
-            setShow(true);
-        }
+          },
+        ]);
+      }))
     };
 
     return (
@@ -492,20 +455,13 @@ const Search = () => {
                     </div>
 
                 <br /><br /><br />
+                </form>
                 <div className="button-submit">
-                    <button className='submit-review'
-                        onClick={ addReview }
-                    >Add Review</button>
-                </div>
-            </form>
-
-            {/* Popup confirmation overaly */}
-            <Modal header="Confirmation"
-                   content="Your review was successfully submitted!"
-                   actions={ actions }
-                   show={ show }
-                   onClose={ onClose }
-            />
+                     <button className='submit-review'
+                         onClick={addReview}
+                     >Add Review</button>
+                     </div>
+            
         </div>
     )
 }
