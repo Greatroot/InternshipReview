@@ -37,7 +37,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="bottom-footer"> {/* ************** bottom-footer **************** */}
-                    <p>© 2021 ratemyinternship, All Rights Reserved</p>
+                    <p>© 2021 ratemyinternships, All Rights Reserved</p>
                 </div>
             </div>
         </div>

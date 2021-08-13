@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f36317-8731-4b3e-8928-600c6b50f996" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RMI_Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.css.orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Form/Search_BACKUP_38466.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Form/Search_BASE_38466.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Form/Search_LOCAL_38466.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Form/Search_REMOTE_38466.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form/Form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Some Recolor.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
