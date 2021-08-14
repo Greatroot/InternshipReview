@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 /*TODO: Ask if increasing header height or font size makes a difference */
-=======
 .icon {
     background: url('../../RMI_Logo.png');
     background-repeat: no-repeat;
@@ -8,7 +6,6 @@
     width: 5em;
     display: inline;
 }
->>>>>>> e2ddc4f4c42b820d07bd8f7266ea08e7b8a5c3b6
 
 .navbar {
     background: #fff;

@@ -114,6 +114,7 @@ textarea {
     background-color: #fbe8a6;
     border-color: #ffa07a;
     border-radius: 10px;
+    box-shadow: 0 0.5em 0.5em -0.4em;
 }
 
 .button-submit {

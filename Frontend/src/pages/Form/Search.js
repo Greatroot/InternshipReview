@@ -258,20 +258,20 @@ const Search = () => {
     const [show, setShow] = useState(false);
 
     // The cancel button on the modal
-    const actions = (
-        <div className="btn-close">
-            <Link to="/">
-                <Button buttonStyle='btn-outline' buttonSize='btn-medium' buttonColor='whitesmoke'>
-                    Close
-                </Button>
-            </Link>
-        </div>
-    );
+    // const actions = (
+    //     <div className="btn-close">
+    //         <Link to="/">
+    //             <Button buttonStyle='btn-outline' buttonSize='btn-medium' buttonColor='whitesmoke'>
+    //                 Close
+    //             </Button>
+    //         </Link>
+    //     </div>
+    // );
 
     // Handles removing modal when user hits close button.
-    const onClose = () => {
-        setShow(false);
-    }
+    // const onClose = () => {
+    //     setShow(false);
+    // }
 
     const addReview = () => {
         Axios.post('https://internship-review-backend.herokuapp.com/create', {
@@ -299,20 +299,20 @@ const Search = () => {
             ]);
         }))
 
-        if(
-            company !== "" &&
-            position !== "" &&
-            rating !== 0 &&
-            startMonth !== 0 &&
-            startYear !== 0 &&
-            endMonth !== 0 &&
-            endYear !== 0 &&
-            comments !== "" &&
-            newComment !== "" &&
-            reviewList !== ""
-        ) {
-            setShow(true);
-        }
+        // if(
+        //     company !== "" &&
+        //     position !== "" &&
+        //     rating !== 0 &&
+        //     startMonth !== 0 &&
+        //     startYear !== 0 &&
+        //     endMonth !== 0 &&
+        //     endYear !== 0 &&
+        //     comments !== "" &&
+        //     newComment !== "" &&
+        //     reviewList !== ""
+        // ) {
+        //     setShow(true);
+        // }
     };
 
     return (
@@ -342,9 +342,9 @@ const Search = () => {
                         required>
                         <option value="">Month</option>
                         <option value="1"> January</option>
-                        <option value="2">February </option>
-                        <option value="3">March </option>
-                        <option value="4">April </option>
+                        <option value="2"> February</option>
+                        <option value="3"> March</option>
+                        <option value="4"> April</option>
                         <option value="5"> May</option>
                         <option value="6"> June</option>
                         <option value="7"> July</option>
@@ -352,7 +352,7 @@ const Search = () => {
                         <option value="9"> September</option>
                         <option value="10"> October</option>
                         <option value="11"> November</option>
-                        <option value="11">December </option>
+                        <option value="12"> December</option>
                     </select>
                 </div>
                 <div className="start-year">
@@ -364,12 +364,12 @@ const Search = () => {
                         }}
                         required>
                         <option value="">Year</option>
-                        <option value="2016"> 2016</option>
-                        <option value="2017">2017 </option>
-                        <option value="2018">2018 </option>
-                        <option value="2019">2019 </option>
-                        <option value="2020"> 2020</option>
-                        <option value="2021"> 2021</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
                     </select>
                 </div>
                 <br /><br /><br />
@@ -384,9 +384,9 @@ const Search = () => {
                         required>
                         <option value="">Month</option>
                         <option value="1"> January</option>
-                        <option value="2">February </option>
-                        <option value="3">March </option>
-                        <option value="4">April </option>
+                        <option value="2"> February</option>
+                        <option value="3"> March</option>
+                        <option value="4"> April</option>
                         <option value="5"> May</option>
                         <option value="6"> June</option>
                         <option value="7"> July</option>
@@ -394,7 +394,7 @@ const Search = () => {
                         <option value="9"> September</option>
                         <option value="10"> October</option>
                         <option value="11"> November</option>
-                        <option value="11">December </option>
+                        <option value="12"> December</option>
                     </select>
                 </div>
                 <div className="start-year">
@@ -447,7 +447,7 @@ const Search = () => {
                             checked={rating === "2"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} required/> 2</div>
+                            }}/> 2</div>
                     <div class="radio-inline">
                         <input
                             type="radio"
@@ -456,7 +456,7 @@ const Search = () => {
                             checked={rating === "3"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} requuired/> 3</div>
+                            }}/> 3</div>
 
                     <div class="radio-inline">
                         <input
@@ -466,7 +466,7 @@ const Search = () => {
                             checked={rating === "4"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} required/> 4</div>
+                            }}/> 4</div>
 
                     <div class="radio-inline">
                         <input
@@ -476,7 +476,7 @@ const Search = () => {
                             checked={rating === "5"}
                             onChange={(event) => {
                                 setRating(event.target.value)
-                            }} required/> 5</div> 
+                            }}/> 5</div> 
                 </div>
                 <br /><br />
 
@@ -484,7 +484,7 @@ const Search = () => {
                     <textarea type='text' className="input-text" 
                     onChange={(event) => {
                         setComments(event.target.value)
-                    }}maxLength='400' placeholder='Your review here...' autoFocus>
+                    }}maxLength='400' placeholder='Your review here...' autoFocus required>
                     </textarea>
                     <br />
                     <div className='word-counter'>
@@ -493,19 +493,19 @@ const Search = () => {
 
                 <br /><br /><br />
                 <div className="button-submit">
-                    <button className='submit-review'
+                    <button disabled={!comments} className='submit-review'
                         onClick={ addReview }
                     >Add Review</button>
                 </div>
             </form>
 
             {/* Popup confirmation overaly */}
-            <Modal header="Confirmation"
+            {/* <Modal header="Confirmation"
                    content="Your review was successfully submitted!"
                    actions={ actions }
                    show={ show }
                    onClose={ onClose }
-            />
+            /> */}
         </div>
     )
 }
