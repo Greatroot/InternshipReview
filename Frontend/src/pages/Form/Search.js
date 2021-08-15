@@ -492,12 +492,13 @@ const Search = () => {
                     </div>
 
                 <br /><br /><br />
-                <div className="button-submit">
+                
+            </form>
+            <div className="button-submit">
                     <button disabled={!comments} className='submit-review'
                         onClick={ addReview }
                     >Add Review</button>
                 </div>
-            </form>
 
             {/* Popup confirmation overaly */}
             {/* <Modal header="Confirmation"
