@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f36317-8731-4b3e-8928-600c6b50f996" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Form/Form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Form/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

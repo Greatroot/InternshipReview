@@ -33,6 +33,15 @@
     box-shadow: 0px 0px 25px rgb(207, 207, 207);
 }
 
+/* TODO: Remove if not used */
+/*.btn--shadow---bottom {*/
+/*    background-color: transparent;*/
+/*    padding: 8px 20px;*/
+/*    border: 1px solid var(--secondary);*/
+/*    transition: all 0.3s ease-out;*/
+/*    box-shadow: 0px 0px 25px 0px  rgb(207, 207, 207);*/
+/*}*/
+
 .btn--medium {
     padding: 8px 20px;
     font-size: 18px;

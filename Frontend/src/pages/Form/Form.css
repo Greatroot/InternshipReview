@@ -109,22 +109,23 @@ textarea {
     font-size: .8em;
     font-weight: italic;
 }
-  
+
 .submit-review {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+
     background-color: #fbe8a6;
     border-color: #ffa07a;
+    border: 1px solid var(--secondary);
     border-radius: 10px;
-    box-shadow: 0 0.5em 0.5em -0.4em;
+    transition: all 0.3s ease-out;
 }
 
 .button-submit {
     text-align: center;
-}
-
-.submit-review {
-    text-align: center;
-    border-color: #ffa07a;
-    border-radius: 10px;
 }
 
 /* Confirmation Overlay */
