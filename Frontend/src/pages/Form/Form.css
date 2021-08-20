@@ -8,6 +8,10 @@
     display: inline;
 }
 
+a.navbar-logo:hover {
+    background: linear-gradient(0deg,white, #FFA07A);
+}
+
 html {
     height: 100%;
 }
