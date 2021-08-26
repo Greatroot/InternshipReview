@@ -39,31 +39,6 @@ function Search() {
 
 
     const addReview = (e) => {
-        Axios.post('https://internship-review-backend.herokuapp.com/create', {
-            company: company,
-            position: position,
-            rating: rating,
-            start_month: startMonth,
-            start_year: startYear,
-            end_month: endMonth,
-            end_year: endYear,
-            comments: comments,
-        }).then((() => {
-            console.log("success");
-            setReviewList([
-                ...reviewList, {
-                    company: company,
-                    position: position,
-                    rating: rating,
-                    start_month: startMonth,
-                    start_year: startYear,
-                    end_month: endMonth,
-                    end_year: endYear,
-                    comments: comments,
-                },
-            ]);
-        }))
-
         if( // ALL of the fields in the form are filled out...
             company !== "" &&
             position !== "" &&
@@ -76,6 +51,32 @@ function Search() {
             // newComment !== "" &&
             // reviewList !== ""
         ) {
+            Axios.post('https://internship-review-backend.herokuapp.com/create', { //TODO: change
+            // Axios.post('http://localhost:3306/create', {
+                company: company,
+                position: position,
+                rating: rating,
+                start_month: startMonth,
+                start_year: startYear,
+                end_month: endMonth,
+                end_year: endYear,
+                comments: comments,
+            }).then((() => {
+                console.log("success");
+                setReviewList([
+                    ...reviewList, {
+                        company: company,
+                        position: position,
+                        rating: rating,
+                        start_month: startMonth,
+                        start_year: startYear,
+                        end_month: endMonth,
+                        end_year: endYear,
+                        comments: comments,
+                    },
+                ]);
+            }))
+
             setShow(true);
             e.preventDefault(); // Should stop the form from refreshing the page.
         }

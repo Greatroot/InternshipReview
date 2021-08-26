@@ -10,6 +10,10 @@ import SearchBar from "../../components/SearchBar/SearchBar.js";
 import { Link } from 'react-router-dom';
 import { Button } from "../../components/Button/Button";
 
+//TODO: Make the search bar have suggestions
+// TODO: Make whatever the user types into the search bar a piece of state that gets passed as a prop
+// into the Results page. Also naviage when user hits enter.
+
 class Home extends React.Component {
     constructor() {
         super()

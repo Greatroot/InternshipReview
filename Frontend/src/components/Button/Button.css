@@ -72,12 +72,12 @@
 
 .btn--large:hover, .btn--medium:hover, .btn--mobile:hover {
     transition: all 0.3s ease-out;
-    background: #ffffff;
+    background: whitesmoke;
     color: #242424;
 }
 
 .btn--wide:hover {
-    color: #fff;
+    color: whitesmoke;
     background-color: #f00946;
     transition: all 0.2s ease-out;
 }
@@ -112,7 +112,7 @@
 }
 
 .primary:hover {
-    background-color: #ffffff;
+    background-color: whitesmoke;
     color: #242424;
     border: none;
 }
