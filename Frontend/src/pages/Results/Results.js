@@ -8,6 +8,8 @@ import Footer from "../../components/Footer/Footer";
 
 // TODO: EXTRA: Make the results pop up without the user having to hit enter. Give it a short delay.
 
+// This is a dummy object to pass into a SearchResult component. Supposed to act as a placeholder for when the page
+// first renders and before Axios has had the chance to make an api request.
 const dummyInfo = {
         data: [
             {
@@ -82,13 +84,13 @@ const Results = () => {
 
         testResults();
 
-            // if(firstUpdate.current) { // If this is the first time useEffect is run...
-            //     getInitialResults();
-            //     firstUpdate.current = false;
-            //     return;
-            // } else { // ...if it's the 2nd, 3rd, 4th, etc. time useEffect is being run...
-            //     getSearchResults();
-            // }
+            if(firstUpdate.current) { // If this is the first time useEffect is run...
+                getInitialResults();
+                firstUpdate.current = false;
+                return;
+            } else { // ...if it's the 2nd, 3rd, 4th, etc. time useEffect is being run...
+                getSearchResults();
+            }
         }, [input]);
     
     const getInitialResults = () => {
