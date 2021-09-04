@@ -51,8 +51,8 @@ function Search() {
             // newComment !== "" &&
             // reviewList !== ""
         ) {
-            Axios.post('https://internship-review-backend.herokuapp.com/create', { //TODO: change
-            // Axios.post('http://localhost:3306/create', {
+            // Axios.post('https://internship-review-backend.herokuapp.com/create', { //TODO: change
+            Axios.post('http://localhost:3001/create', {
                 company: company,
                 position: position,
                 rating: rating,

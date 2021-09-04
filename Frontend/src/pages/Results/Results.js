@@ -8,6 +8,9 @@ import Footer from "../../components/Footer/Footer";
 
 // TODO: EXTRA: Make the results pop up without the user having to hit enter. Give it a short delay.
 
+// The link below is the timestamp for when Pedro implements search suggestions.
+// https://youtu.be/x7niho285qs?t=962
+
 // This is a dummy object to pass into a SearchResult component. Supposed to act as a placeholder for when the page
 // first renders and before Axios has had the chance to make an api request.
 const dummyInfo = {
@@ -46,16 +49,17 @@ const dummyInfo = {
 const Results = () => {
     // Supposed to be an array, NOT an object!!! How I fixed the "setInput not a func" error.
     const [ input, setInput ] = useState(""); // The input the user types in.
-    const [ results, setResults ] = useState(dummyInfo); // The internship reviews the user searched for.
+    const [ results, setResults ] = useState([]); // All of the reviews in the database
+    const [ filteredResults, setFilteredResults ] = useState([]); // The internship reviews the user searched for.
 
     const firstUpdate = useRef(true); // True if component hasn't mounted yet, false if it already has.
                                     // Being used so that we can have the useEffect hook do 2 different things based
                                     // on whether it has run for the first time or sometime after.
 
     const renderResults = () => {
-        if(results !== undefined)
+        if(filteredResults !== undefined)
         {
-            return results.data.map((review) => {
+            return filteredResults.map((review) => {
                 return (
                     <div className="item" key={review.id}>
                         <SearchResult rating={review.rating}
@@ -74,6 +78,8 @@ const Results = () => {
         }
     };
 
+    // Should it only get reviews every page refresh or more frequently than that?
+    // Play around with the difference between getting data once per page refresh or more. Test performance.
     useEffect(() => {
         // Fill this out later when we connect to the backend.
         // The idea will be to make an api call after every full second
@@ -82,51 +88,64 @@ const Results = () => {
 
         // Might use Redux instead.
 
-        testResults();
+        if(firstUpdate.current) { // if this is the first time we are mounting the page, then get our reviews from the database.
+            getReviews();
+        }
+            // if(firstUpdate.current) { // If this is the first time useEffect is run...
+            //     getInitialResults();
+            //     firstUpdate.current = false;
+            //     return;
+            // } else { // ...if it's the 2nd, 3rd, 4th, etc. time useEffect is being run...
+            //     getSearchResults();
+            // }
+        }, []);
 
-            if(firstUpdate.current) { // If this is the first time useEffect is run...
-                getInitialResults();
-                firstUpdate.current = false;
-                return;
-            } else { // ...if it's the 2nd, 3rd, 4th, etc. time useEffect is being run...
-                getSearchResults();
-            }
-        }, [input]);
-    
-    const getInitialResults = () => {
-        Axios.get('https://internship-review-backend.herokuapp.com/popular').then((response) => {
-        // Axios.get('http://localhost:3306/popular').then((response) => {
-            console.log(`Initial API call: \n${response}`);
 
-            setResults(response); // Is this efficient?
+    //TODO: Remnants of me trying to handle the searching through the backend, which became a lost cause lol.
+    // Remove this if never used.
+
+    // const getInitialResults = () => {
+    //     // Axios.get('https://internship-review-backend.herokuapp.com/popular').then((response) => {
+    //     Axios.get('http://localhost:3001/popular').then((response) => {
+    //         console.log(`Initial API call: \n${response}`);
+    //
+    //         setFilteredResults(response); // Is this efficient?
+    //     });
+    // };
+    //
+    // const getSearchResults = () => {
+    //     // Axios.get('https://internship-review-backend.herokuapp.com/search?', {
+    //         Axios.get('http//localhost:3001/search?', {
+    //         params: { term: input }
+    //         }).then((response) => {
+    //         console.log(`Grabbing search results: \n${response}`);
+    //
+    //         setFilteredResults(response); // Is this efficient?
+    //     });
+    // }
+
+    const getReviews = () => {
+        // Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
+        Axios.get('http://localhost:3001/reviews?').then((response) => {
+            console.log(response);
+            setResults(response.data);
         });
-    };
-
-    const getSearchResults = () => {
-        Axios.get('https://internship-review-backend.herokuapp.com/search?', {
-        //     Axios.get('https//localhost:3306/search?', {
-            params: { term: input }
-            }).then((response) => {
-            console.log(`Grabbing search results: \n${response}`);
-
-            setResults(response); // Is this efficient?
-        });
-
-        // const results = await Axios.get('https://internship-review-backend.herokuapp.com/reviews');
-        // console.log(results);
     }
 
-    // Remove after done testing.
-    const testResults = () => {
-        Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
-        // Axios.get('https://localhost:3306/reviews?').then((response) => {
-            console.log(response);
+    const searchResults = (event) => {
+        const searchTerm = event.target.value;
+        const newFilter = results.filter((value) => {
+            return value.title.includes(searchTerm);
         });
+
+        setFilteredResults(newFilter);
     }
 
     const handleUserTyping = (event) => {
-        // const {name, value} = event.target;
         setInput(event.target.value);
+        // getReviews(); Should it only get reviews every page refresh or more frequently than that?
+        searchResults(event);
+
     };
 
     return(
