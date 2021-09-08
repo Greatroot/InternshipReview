@@ -1,5 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
 import "./Home.css";
 import DesignComponent from "./DesignComponent";
 import Header from "../../components/Header/Header";
@@ -10,56 +9,61 @@ import SearchBar from "../../components/SearchBar/SearchBar.js";
 import { Link } from 'react-router-dom';
 import { Button } from "../../components/Button/Button";
 
-class Home extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            companyName: ""
-        }
-        this.handleChange = this.handleChange.bind(this)
-    }
-    handleChange(event) {
-        const { name, value } = event.target
-        this.setState({
-            [name]: value
-        })
+//TODO: Make the search bar have suggestions
+// TODO: Make whatever the user types into the search bar a piece of state that gets passed as a prop
+// into the Results page. Also naviage when user hits enter.
 
-    }
+const Home = ({ resultsSearchTerm, setResultsSearchTerm }) => {
+    const [searchTerm, setSearchTerm] = useState("");
 
-    render() {
-        return (
-            <div className="home-container">
-                <Header />
-                <Image />
-                <form className="searchBar">
-                    <div className='slogan'>
-                        <h1> Because Interning
-                            Should Be Fun!</h1>
+    const handleChange = (event) => {
+        const { value } = event.target
+        setSearchTerm(value);
+    };
 
+    const searchReviews = () => {
+        setResultsSearchTerm(searchTerm);
+        console.log("searchReviews just got run")
+        console.log(resultsSearchTerm);
+    };
+
+    return (
+        <div className="home-container">
+            <Header />
+            <Image />
+            <div className="hero">
+                <div className='slogan'>
+                    <h1> Because Interning
+                        Should Be Fun!</h1>
+                    <form className='searchBar'>
                         <input type="text"
-                            placeholder="Search for companies"
-                            name="companyName"
-                            value={this.state.companyName}
-                            onChange={this.handleChange}
-                            className="searchBar-input"
+                               placeholder="Search for companies"
+                               name="companyName"
+                               value={ searchTerm }
+                               onChange={ handleChange }
+                               className="searchBar-input"
                         />
-                        <IoSearchOutline className='search-icon' />
-                        <p>OR</p>
-                        <div className='mobile-nav-btn'>
-                        <Link to="/add-internship" className='btn-link'>
-                            <Button buttonStyle="btn--shadow"> Rate an Internship </Button>
+                        <Link to='/results' className='search-icon'>
+                            <button className='search-button' type='submit' onClick={ searchReviews }>
+                                <IoSearchOutline />
+                            </button>
                         </Link>
-                        </div>
+                    </form>
+                    <p>OR</p>
+                    <div className='mobile-nav-btn'>
+                    <Link to="/add-internship" className='btn-link'>
+                        <Button buttonStyle="btn--shadow"> Rate an Internship </Button>
+                    </Link>
                     </div>
-                    {/* <SearchBar /> */}
+                </div>
+                {/* <SearchBar /> */}
 
-                </form>
-
-                <DesignComponent />
-                <Footer />
             </div>
-        )
-    }
 
+            <DesignComponent />
+            <Footer />
+        </div>
+    );
 }
+
 export default Home
