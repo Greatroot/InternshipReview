@@ -46,10 +46,11 @@ const dummyInfo = {
         ]
     }
 
-const Results = () => {
+const Results = ({ homeSearchTerm }) => {
     // Supposed to be an array, NOT an object!!! How I fixed the "setInput not a func" error.
     const [ input, setInput ] = useState(""); // The input the user types in.
-    const [ results, setResults ] = useState([]); // All of the reviews in the database
+    const [ results, setResults ] = useState([]); // All of the reviews in the database.
+                // ************* IMPORTANT ***********: results.data will get you the array of reviews.
     const [ filteredResults, setFilteredResults ] = useState([]); // The internship reviews the user searched for.
 
     const firstUpdate = useRef(true); // True if component hasn't mounted yet, false if it already has.
@@ -88,64 +89,55 @@ const Results = () => {
 
         // Might use Redux instead.
 
-        if(firstUpdate.current) { // if this is the first time we are mounting the page, then get our reviews from the database.
+        if(firstUpdate.current && homeSearchTerm !== "") {
+            // Make it based on navigation history?
+            console.log("I made it here.")
+            searchOnMount(homeSearchTerm);
+        } else if(firstUpdate.current) { // if this is the first time we are mounting the page, then get our reviews from the database.
             getReviews();
         }
-            // if(firstUpdate.current) { // If this is the first time useEffect is run...
-            //     getInitialResults();
-            //     firstUpdate.current = false;
-            //     return;
-            // } else { // ...if it's the 2nd, 3rd, 4th, etc. time useEffect is being run...
-            //     getSearchResults();
-            // }
+
         }, []);
-
-
-    //TODO: Remnants of me trying to handle the searching through the backend, which became a lost cause lol.
-    // Remove this if never used.
-
-    // const getInitialResults = () => {
-    //     // Axios.get('https://internship-review-backend.herokuapp.com/popular').then((response) => {
-    //     Axios.get('http://localhost:3001/popular').then((response) => {
-    //         console.log(`Initial API call: \n${response}`);
-    //
-    //         setFilteredResults(response); // Is this efficient?
-    //     });
-    // };
-    //
-    // const getSearchResults = () => {
-    //     // Axios.get('https://internship-review-backend.herokuapp.com/search?', {
-    //         Axios.get('http//localhost:3001/search?', {
-    //         params: { term: input }
-    //         }).then((response) => {
-    //         console.log(`Grabbing search results: \n${response}`);
-    //
-    //         setFilteredResults(response); // Is this efficient?
-    //     });
-    // }
 
     const getReviews = () => {
         // Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
         Axios.get('http://localhost:3001/reviews?').then((response) => {
-            console.log(response);
             setResults(response.data);
+        }).catch(({response}) => {
+            // Put stuff in here if you want to handle heroku crashing in a user friendly way.
         });
     }
 
     const searchResults = (event) => {
+        console.log(`event.target.value: ${event.target.value}`);
         const searchTerm = event.target.value;
+        console.log(`searchTerm: ${searchTerm}`);
+        console.log(`results: ${results}`)
         const newFilter = results.filter((value) => {
-            return value.title.includes(searchTerm);
+            return value.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                value.position.toLowerCase().includes(searchTerm.toLowerCase());
         });
-
         setFilteredResults(newFilter);
+        console.log(`filteredResults: ${filteredResults}`)
+    }
+
+    // Could combine this func and the one above???
+    const searchOnMount = (term) => {
+        // Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
+        Axios.get('http://localhost:3001/reviews?').then((response) => {
+            setResults(response.data); //TODO: The problem is that setResults is acting asyncronously. Perhaps I should split up the func.
+        }).catch(({response}) => {
+            // Put stuff in here if you want to handle heroku crashing in a user friendly way.
+        }).finally(() => {
+            console.log(`results: ${results}`);
+            handleUserTyping({ target: { value: homeSearchTerm }});
+        });
     }
 
     const handleUserTyping = (event) => {
         setInput(event.target.value);
         // getReviews(); Should it only get reviews every page refresh or more frequently than that?
         searchResults(event);
-
     };
 
     return(
@@ -154,14 +146,18 @@ const Results = () => {
             <div className="results-container">
                 <div className="searchBar-container">
                     <SearchBar type = "text"
-                               placeholder = "Search for an internship company"
+                               placeholder = "Search for an internship company or position"
                                name = "companyName"
                                value = { input }
                                onChange = { handleUserTyping }
                     />
                 </div>
                 <div className="search-term">
-                    <h1>Google</h1>
+                    {(input !== "") ? (
+                        <h1>{`Results for "${input}"`}</h1>
+                        ) :
+                        null
+                    }
                 </div>
                 <div className="search-results">
                     {renderResults()}

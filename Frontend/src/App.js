@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from "./pages/Home/Home";
@@ -9,25 +9,30 @@ import { Button } from './components/Button/Button';
 import Axios from 'axios'
 
 function App() {
-        const [data, setData] = React.useState(null);
+        const [data, setData] = useState(null);
+        const [searchTerm, setSearchTerm] = useState("");
 
         React.useEffect(() => {
-        Axios.get("https://internship-review-backend.herokuapp.com/api/get").then((data) =>  {
-        // fetch("/reviews")
-        // .then((res) => res.json())
-        // .then((data) => setData(data.message));
-        console.log(data.data)
-    });
- }, []);
+            Axios.get("https://internship-review-backend.herokuapp.com/api/get").then((data) =>  {
+            // fetch("/reviews")
+            // .then((res) => res.json())
+            // .then((data) => setData(data.message));
+            console.log(data.data)
+            });
+        }, []);
 
     //IMPORTANT: Be sure to not put the Header in App.js. There are different versions of the header, so it's better to put the header
     // in separately for each page.
     return (
         <BrowserRouter>
             <Switch>
-                <Route path='/' exact component={Home} />
+                <Route path='/' exact>
+                    <Home resultsSearchTerm={ searchTerm } setResultsSearchTerm={ setSearchTerm } />
+                </Route>
                 <Route path='/add-internship' component={Form}/>
-                <Route path='/results' component={Results} />
+                <Route path='/results'>
+                    <Results homeSearchTerm={searchTerm} />
+                </Route>
                 {/* <Route path='/submit' component={Home} /> */}
                 <Route path='/instagram' component={() => {
                     window.location.href = "https://www.instagram.com/ratemyinternships/?hl=en";

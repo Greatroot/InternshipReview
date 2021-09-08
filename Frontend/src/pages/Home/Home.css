@@ -84,6 +84,8 @@ img {
     top: -15em;
     align-items: center;
     position: relative;
+
+    transition: all 0.3s ease-out;
 }
 
 .searchBar-input:focus {
