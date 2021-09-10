@@ -100,8 +100,8 @@ const Results = ({ homeSearchTerm }) => {
         }, []);
 
     const getReviews = () => {
-        // Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
-        Axios.get('http://localhost:3001/reviews?').then((response) => {
+        Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
+        //Axios.get('http://localhost:3001/reviews?').then((response) => {
             setResults(response.data);
         }).catch(({response}) => {
             // Put stuff in here if you want to handle heroku crashing in a user friendly way.
@@ -123,8 +123,8 @@ const Results = ({ homeSearchTerm }) => {
 
     // Could combine this func and the one above???
     const searchOnMount = (term) => {
-        // Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
-        Axios.get('http://localhost:3001/reviews?').then((response) => {
+        Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
+        //Axios.get('http://localhost:3001/reviews?').then((response) => {
             setResults(response.data); //TODO: The problem is that setResults is acting asyncronously. Perhaps I should split up the func.
         }).catch(({response}) => {
             // Put stuff in here if you want to handle heroku crashing in a user friendly way.
