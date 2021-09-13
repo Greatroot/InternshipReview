@@ -48,19 +48,57 @@ const dummyInfo = {
 
 const Results = ({ homeSearchTerm }) => {
     // Supposed to be an array, NOT an object!!! How I fixed the "setInput not a func" error.
-    const [ input, setInput ] = useState(""); // The input the user types in.
-    const [ results, setResults ] = useState([]); // All of the reviews in the database.
-                // ************* IMPORTANT ***********: results.data will get you the array of reviews.
-    const [ filteredResults, setFilteredResults ] = useState([]); // The internship reviews the user searched for.
+    const [ input, setInput ] = useState(homeSearchTerm); // The input the user types in.
+    const [ reviews, setReviews ] = useState([])// All of the reviews in the database.
+    const [ filteredReviews, setFilteredReviews ] = useState([]); // The internship reviews the user searched for.
 
     const firstUpdate = useRef(true); // True if component hasn't mounted yet, false if it already has.
                                     // Being used so that we can have the useEffect hook do 2 different things based
                                     // on whether it has run for the first time or sometime after.
 
+    // Should it only get reviews every page refresh or more frequently than that?
+    // Play around with the difference between getting data once per page refresh or more. Test performance.
+
+    // Acts as "componentDidMount"
+    useEffect(() => {
+        // Fill this out later when we connect to the backend.
+        // The idea will be to make an api call after every full second
+        // of the user not typing anything into the search bar, no hitting
+        // enter required.
+
+        // Might use Redux instead.
+
+        if(firstUpdate.current) { // if this is the first time we are mounting the page, then get our reviews from the database.
+            getReviews();
+            console.log(`Got reviews in useEffect(): ${reviews}` )
+            firstUpdate.current = false;
+
+        }
+
+    }, []);
+
+    // For when the input field updates (so when the user enters a keystroke into the searchbar).
+    useEffect(() => {
+        const eventObj = { target: { value: input } };
+        console.log(`eventObj.target.value = ${eventObj.target.value}`)
+        searchResults(eventObj);
+    }, [input]);
+
+    // For when the reviews get retrieved from the database on the initial render.
+    useEffect(() => {
+        if(homeSearchTerm !== "") {
+            console.log("Initial render & homeSearchTerm !== ''");
+
+            const eventObj = { target: { value: homeSearchTerm } };
+            console.log(`eventObj.target.value = ${eventObj.target.value}`)
+            searchResults(eventObj);
+        }
+    }, [reviews]);
+
     const renderResults = () => {
-        if(filteredResults !== undefined)
+        if(filteredReviews !== undefined)
         {
-            return filteredResults.map((review) => {
+            return filteredReviews.map((review) => {
                 return (
                     <div className="item" key={review.id}>
                         <SearchResult rating={review.rating}
@@ -79,30 +117,14 @@ const Results = ({ homeSearchTerm }) => {
         }
     };
 
-    // Should it only get reviews every page refresh or more frequently than that?
-    // Play around with the difference between getting data once per page refresh or more. Test performance.
-    useEffect(() => {
-        // Fill this out later when we connect to the backend.
-        // The idea will be to make an api call after every full second
-        // of the user not typing anything into the search bar, no hitting
-        // enter required.
-
-        // Might use Redux instead.
-
-        if(firstUpdate.current && homeSearchTerm !== "") {
-            // Make it based on navigation history?
-            console.log("I made it here.")
-            searchOnMount(homeSearchTerm);
-        } else if(firstUpdate.current) { // if this is the first time we are mounting the page, then get our reviews from the database.
-            getReviews();
-        }
-
-        }, []);
-
     const getReviews = () => {
-        Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
-        //Axios.get('http://localhost:3001/reviews?').then((response) => {
-            setResults(response.data);
+        // Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
+        Axios.get('http://localhost:3001/reviews?').then((response) => {
+            console.log(response);
+            // Filter the reviews so that they are initially in order by most recent to least recent.
+            const reviewsInOrder = response.data.reverse();
+            setReviews(response.data);
+            setFilteredReviews(response.data); // "initializes the filteredReviews so that the page will
         }).catch(({response}) => {
             // Put stuff in here if you want to handle heroku crashing in a user friendly way.
         });
@@ -112,32 +134,20 @@ const Results = ({ homeSearchTerm }) => {
         console.log(`event.target.value: ${event.target.value}`);
         const searchTerm = event.target.value;
         console.log(`searchTerm: ${searchTerm}`);
-        console.log(`results: ${results}`)
-        const newFilter = results.filter((value) => {
+        console.log(`results: ${reviews}`);
+        const newFilter = reviews.filter((value) => {
             return value.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 value.position.toLowerCase().includes(searchTerm.toLowerCase());
         });
-        setFilteredResults(newFilter);
-        console.log(`filteredResults: ${filteredResults}`)
+        setFilteredReviews(newFilter);
+        console.log(`filteredResults: ${filteredReviews}`)
     }
 
-    // Could combine this func and the one above???
-    const searchOnMount = (term) => {
-        Axios.get('https://internship-review-backend.herokuapp.com/reviews?').then((response) => {
-        //Axios.get('http://localhost:3001/reviews?').then((response) => {
-            setResults(response.data); //TODO: The problem is that setResults is acting asyncronously. Perhaps I should split up the func.
-        }).catch(({response}) => {
-            // Put stuff in here if you want to handle heroku crashing in a user friendly way.
-        }).finally(() => {
-            console.log(`results: ${results}`);
-            handleUserTyping({ target: { value: homeSearchTerm }});
-        });
-    }
-
+    // TODO: Currently runs every single keystroke. Make it so there is a delay before running setInput().
     const handleUserTyping = (event) => {
         setInput(event.target.value);
-        // getReviews(); Should it only get reviews every page refresh or more frequently than that?
-        searchResults(event);
+        // // getReviews(); Should it only get reviews every page refresh or more frequently than that?
+        // searchResults(event);
     };
 
     return(
