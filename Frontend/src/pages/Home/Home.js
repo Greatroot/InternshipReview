@@ -23,8 +23,8 @@ const Home = ({ resultsSearchTerm, setResultsSearchTerm }) => {
 
     const searchReviews = () => {
         setResultsSearchTerm(searchTerm);
-        console.log("searchReviews just got run")
-        console.log(resultsSearchTerm);
+        // console.log("searchReviews just got run")
+        // console.log(resultsSearchTerm);
     };
 
     return (
