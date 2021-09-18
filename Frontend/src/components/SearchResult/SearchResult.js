@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./SearchResult.css";
 
 //TODO: Implement the stars AND the date.
-const SearchResult = ({ rating, date, position, company, startMonth, startYear, endMonth, endYear, comments }) => {
-
+const SearchResult = ({ rating, date, position, company, startMonth, startYear, endMonth, endYear, comments, entryDate }) => {
+    
     return (
         <div className="card-container">
             <div className="card-header">
                 <div className="card-header--container">
-                    <h4 className="card-header-stars">Placeholder for stars</h4>
-                    <p>Date placeholder</p>
+                    {/*<span className={card-header-stars}>*/}
+
+                    {/*</span>*/}
+                    <h4 className="card-header-stars"></h4>
+                    <p>{`${entryDate.entryDay} ${entryDate.entryMonth}, ${entryDate.entryYear}`}</p>
                 </div>
             </div>
             <div className="position-header">

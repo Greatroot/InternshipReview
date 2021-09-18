@@ -13,6 +13,12 @@ import Footer from "../../components/Footer/Footer";
 
 // This is a dummy object to pass into a SearchResult component. Supposed to act as a placeholder for when the page
 // first renders and before Axios has had the chance to make an api request.
+
+// TODO: Finish implementing the stars.
+//      - Find and add a nice looking star icon/svg.
+//      - Add the logic.
+// TODO: Make the spacing tighter on the reviews cards.
+// TODO: Convert the date ranges
 const dummyInfo = {
         data: [
             {
@@ -72,7 +78,6 @@ const Results = ({ homeSearchTerm }) => {
             getReviews();
             console.log(`Got reviews in useEffect(): ${reviews}` )
             firstUpdate.current = false;
-
         }
 
     }, []);
@@ -98,7 +103,37 @@ const Results = ({ homeSearchTerm }) => {
     const renderResults = () => {
         if(filteredReviews !== undefined)
         {
-            return filteredReviews.map((review) => {
+            return filteredReviews.map((review) => { // The logic below is for passing the parsed entryDate of each record to their SearchResults component.
+                const entryDay = review.entry_date.substring(8, 10);
+                let entryMonth;
+                const entryYear = review.entry_date.substring(0, 4);
+                switch(review.entry_date.substring(5, 7)) {
+                    case "01":
+                        entryMonth = "January"
+                    case "02":
+                        entryMonth = "February"
+                    case "03":
+                        entryMonth = "March"
+                    case "04":
+                        entryMonth = "April"
+                    case "05":
+                        entryMonth = "May"
+                    case "06":
+                        entryMonth = "June"
+                    case "07":
+                        entryMonth = "July"
+                    case "08":
+                        entryMonth = "August"
+                    case "09":
+                        entryMonth = "September"
+                    case "10":
+                        entryMonth = "October"
+                    case "11":
+                        entryMonth = "November"
+                    case "12":
+                        entryMonth = "December"
+                }
+
                 return (
                     <div className="item" key={review.id}>
                         <SearchResult rating={review.rating}
@@ -110,6 +145,7 @@ const Results = ({ homeSearchTerm }) => {
                                       endMonth={review.end_month}
                                       endYear={review.end_year}
                                       comments={review.comments}
+                                      entryDate={{ entryDay: entryDay, entryMonth: entryMonth, entryYear: entryYear }}
                         />
                     </div>
             );
