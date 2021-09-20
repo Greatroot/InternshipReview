@@ -23,8 +23,7 @@
 .card-header {
     background: var(--primary);
     border-radius: 30px 30px 0px 0px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
 }
 
 .card-header--container {
@@ -33,8 +32,12 @@
     font-size: 14px;
 }
 
-.card-stars {
-
+.card-header-stars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    font-size: 10px;
 }
 
 .position-header {
@@ -53,6 +56,8 @@
     font-size: 24px;
     line-height: 38px;
     text-transform: capitalize;
+
+    height: 3rem; /* This is a solution to the spacing issue but it's kind of wack */
 }
 
 .subheader-container {
@@ -68,6 +73,8 @@
     text-transform: capitalize;
     margin-left: 25px;
     border-bottom: 2px solid #F4976C;
+
+    height: 3.5rem;
 }
 
 .subheader-text {
@@ -75,11 +82,33 @@
 }
 
 .content {
-    font-family: Oxygen, serif;
+    font-family: Oxygen;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 17px;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+/* Media Queries */
+
+/* Mini Screen */
+/* The main reason for this screen size is that I need to stop the review cards from getting taller than it is wide. */
+@media (max-width: 580px) {
+    .card-container {
+        width: 90%;
+    }
+}
+
+/* LAPTOPS */
+@media (min-width: 768px) {
+
+}
+
+/* MONITORS */
+@media (min-width: 1280px) {
+    .card-header-stars {
+        width: 20%;
+    }
 }

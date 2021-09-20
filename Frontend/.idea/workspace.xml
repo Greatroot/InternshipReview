@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f36317-8731-4b3e-8928-600c6b50f996" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/star-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/star-solid.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchResult/SearchResult.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchResult/SearchResult.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchResult/SearchResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchResult/SearchResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Results/Results.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Results/Results.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Results/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Results/Results.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +105,7 @@
       <workItem from="1631565894477" duration="486000" />
       <workItem from="1631566394038" duration="2367000" />
       <workItem from="1631861672545" duration="2313000" />
-      <workItem from="1631866881629" duration="9198000" />
+      <workItem from="1631866881629" duration="20970000" />
     </task>
     <servers />
   </component>

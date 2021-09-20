@@ -92,47 +92,56 @@ const Results = ({ homeSearchTerm }) => {
     // For when the reviews get retrieved from the database on the initial render.
     useEffect(() => {
         if(homeSearchTerm !== "") {
-            console.log("Initial render & homeSearchTerm !== ''");
+            // console.log("Initial render & homeSearchTerm !== ''");
 
             const eventObj = { target: { value: homeSearchTerm } };
-            console.log(`eventObj.target.value = ${eventObj.target.value}`)
+            // console.log(`eventObj.target.value = ${eventObj.target.value}`)
             searchResults(eventObj);
         }
     }, [reviews]);
+
+    const convertMonth = (monthNum) => {
+        if(typeof monthNum === "string") { // If it's the entry_date, which comes as a string, then convert it into an Int for the switch statement.
+            monthNum = parseInt(monthNum);
+        }
+        let entryMonth;
+        switch(monthNum) {
+            case 1:
+                entryMonth = "January"
+            case 2:
+                entryMonth = "February"
+            case 3:
+                entryMonth = "March"
+            case 4:
+                entryMonth = "April"
+            case 5:
+                entryMonth = "May"
+            case 6:
+                entryMonth = "June"
+            case 7:
+                entryMonth = "July"
+            case 8:
+                entryMonth = "August"
+            case 9:
+                entryMonth = "September"
+            case 10:
+                entryMonth = "October"
+            case 11:
+                entryMonth = "November"
+            case 12:
+                entryMonth = "December"
+        }
+        return entryMonth;
+    }
 
     const renderResults = () => {
         if(filteredReviews !== undefined)
         {
             return filteredReviews.map((review) => { // The logic below is for passing the parsed entryDate of each record to their SearchResults component.
+                // Set up entry date object
                 const entryDay = review.entry_date.substring(8, 10);
-                let entryMonth;
+                const entryMonth = convertMonth(review.entry_date.substring(5, 7));
                 const entryYear = review.entry_date.substring(0, 4);
-                switch(review.entry_date.substring(5, 7)) {
-                    case "01":
-                        entryMonth = "January"
-                    case "02":
-                        entryMonth = "February"
-                    case "03":
-                        entryMonth = "March"
-                    case "04":
-                        entryMonth = "April"
-                    case "05":
-                        entryMonth = "May"
-                    case "06":
-                        entryMonth = "June"
-                    case "07":
-                        entryMonth = "July"
-                    case "08":
-                        entryMonth = "August"
-                    case "09":
-                        entryMonth = "September"
-                    case "10":
-                        entryMonth = "October"
-                    case "11":
-                        entryMonth = "November"
-                    case "12":
-                        entryMonth = "December"
-                }
 
                 return (
                     <div className="item" key={review.id}>
@@ -140,9 +149,9 @@ const Results = ({ homeSearchTerm }) => {
                             // date={}
                                       position={review.position}
                                       company={review.company}
-                                      startMonth={review.start_month}
+                                      startMonth={convertMonth(review.start_month)}
                                       startYear={review.start_year}
-                                      endMonth={review.end_month}
+                                      endMonth={convertMonth(review.end_month)}
                                       endYear={review.end_year}
                                       comments={review.comments}
                                       entryDate={{ entryDay: entryDay, entryMonth: entryMonth, entryYear: entryYear }}

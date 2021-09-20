@@ -1,17 +1,59 @@
 import React, { useState } from 'react';
 import "./SearchResult.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
+// import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 //TODO: Implement the stars AND the date.
 const SearchResult = ({ rating, date, position, company, startMonth, startYear, endMonth, endYear, comments, entryDate }) => {
-    
+    const star = (starNum) => {
+        return (
+            <FontAwesomeIcon icon={rating >= starNum ? faStar : faStarRegular}
+                             color={rating >= starNum ? "#EF7B45" : "#5EB1BF"}
+                             size="2x"
+            />
+        );
+    };
+
+
+    // const renderStars = () => {
+    //     switch(rating) {
+    //         case 1:
+    //             return <FontAwesomeIcon icon={["fas", "fa-star"] color="yellow"} />;
+    //         case 2:
+    //             return (
+    //                 <FontAwesomeIcon icon={["fas", "fa-star"] color="yellow"} />;
+    //                 <FontAwesomeIcon icon={["fas", "fa-star"] color="yellow"} />;
+    //             );
+    //     }
+    // }
+
     return (
         <div className="card-container">
             <div className="card-header">
                 <div className="card-header--container">
-                    {/*<span className={card-header-stars}>*/}
+                    <div className="card-header-stars">
+                        {star(1)}
+                        {star(2)}
+                        {star(3)}
+                        {star(4)}
+                        {star(5)}
+                        {/*<FontAwesomeIcon icon={["fas", "fa-star"]} color="yellow" />*/}
+                        {/*<FontAwesomeIcon icon={rating >= 2 ? ["fas", "fa-star"] : ["far", "fa-star"]}*/}
+                        {/*                 color={rating >= 2 ? "yellow" : "grey"}*/}
+                        {/*/>*/}
+                        {/*<FontAwesomeIcon icon={rating >= 3 ? ["fas", "fa-star"] : ["far", "fa-star"]}*/}
+                        {/*                 color={rating >= 3 ? "yellow" : "grey"}*/}
+                        {/*/>*/}
+                        {/*<FontAwesomeIcon icon={rating >= 4 ? ["fas", "fa-star"] : ["far", "fa-star"]}*/}
+                        {/*                 color={rating >= 4 ? "yellow" : "grey"}*/}
+                        {/*/>*/}
+                        {/*<FontAwesomeIcon icon={rating >= 5 ? ["fas", "fa-star"] : ["far", "fa-star"]}*/}
+                        {/*                 color={rating >= 5 ? "yellow" : "grey"}*/}
+                        {/*/>*/}
+                    </div>
 
-                    {/*</span>*/}
-                    <h4 className="card-header-stars"></h4>
                     <p>{`${entryDate.entryDay} ${entryDate.entryMonth}, ${entryDate.entryYear}`}</p>
                 </div>
             </div>
