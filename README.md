@@ -32,7 +32,7 @@ The main purpose of the site is to help college students who want to find out mo
 ## Roadmap
 Because this project is not yet completed, here is a roadmap of what needs to be done before we can launch the website to the public:
 
-### tasks left to finish before launch:
+### Tasks left to finish before launch:
 - Finish encoding private information so that we can successfully connect our front end to our Heroku server and our MySQL server.
 
 ### Future features to add after launch:
