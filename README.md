@@ -16,25 +16,26 @@ The main purpose of the site is to help college students who want to find out mo
  1. write and post a review of any internships they attended
  2. search for a company, internship, or intern posiiton and browse any and all reviews made by real interns.
 
-##Tools Used:
-- ###Frontend
--   ReactJS
--   Font Awesome
--   Material UI
+## Tools Used:
 
-- ###Backend
--   MySQL Workbench
+### Frontend
+- ReactJS
+- Font Awesome
+- Material UI
 
-- ###Hosted on
--   Heroku
+### Backend
+- MySQL Workbench
 
-##Roadmap
+### Hosted on
+- Heroku
+
+## Roadmap
 Because this project is not yet completed, here is a roadmap of what needs to be done before we can launch the website to the public:
 
-###tasks left to finish before launch:
+### tasks left to finish before launch:
 - Finish encoding private information so that we can successfully connect our front end to our Heroku server and our MySQL server.
 
-###Future features to add after launch:
+### Future features to add after launch:
 - Automatic moderation to approve each review
 - Additional. optional information on the internship review form like applicatin link, date, offer date, salary, etc.
 - Add additional filter options for reveiws
