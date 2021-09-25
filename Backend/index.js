@@ -31,6 +31,12 @@ app.get("/", (req, res) => {
     }
 );
 
+var corsOptions = {
+    origin: 'http://localhost:3000', //change this to actual website
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+
 app.put('/update', (req, res) => {
     const id = req.body.id
     const comments = req.body.comments
@@ -64,7 +70,7 @@ app.delete("/delete/:id", (req, res) => {
     )
 })
 
-app.get('/reviews', (req, res) => {
+app.get('/reviews', cors(), (req, res) => {
     db.query("SELECT * FROM new_reviews", (err,result) => {
         if (err){
             console.log(err)
@@ -104,7 +110,7 @@ app.get('/search', cors(),(req, res, next) => {
     })
 })
 
-app.post('/create', (req, res) => {
+app.post('/create', cors(corsOptions), (req, res, next) => {
     const company = req.body.company;
     const position = req.body.position;
     const rating = req.body.rating;
