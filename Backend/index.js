@@ -2,11 +2,17 @@ const express = require('express')
 const app = express()
 const mysql = require('mysql')
 const cors = require('cors')
+const PORT = process.env.PORT || 3306;
 
 require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
+
+var corsOptions = {
+    origin: 'http://localhost:3000', //change this to actual website, localhost right now for testing
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 // access to the database - update it the new database
 const db = mysql.createConnection({
@@ -16,14 +22,14 @@ const db = mysql.createConnection({
     database: login.env.database,
 });
 
-/*app.get("/", (req, res) => {
+app.get("/", (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*")
     res.setHeader("Access-Control-Allow-Credentials", "true");
     res.setHeader("Access-Control-Max-Age", "1800");
     res.setHeader("Access-Control-Allow-Headers", "content-type");
     res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" );
     }
-);*/
+);
 
 app.put('/update', (req, res) => {
     const id = req.body.id
@@ -113,8 +119,10 @@ app.post('/create', (req, res) => {
         [company, position, rating, start_month, start_year, end_month, end_year, comments],
         (err, result) => {
             if (err) {
+                console.log("not inserted");
                 console.log(err)
             } else {
+                console.log("success?");
                 res.send("values inserted");
             }
         }
