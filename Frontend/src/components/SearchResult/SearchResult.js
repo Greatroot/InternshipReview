@@ -1,15 +1,18 @@
 import React from 'react';
 import "./SearchResult.css";
+import RatingStars from "../RatingStars/RatingStars";
 
 //TODO: Implement the stars AND the date.
-const SearchResult = ({ rating, date, position, company, startMonth, startYear, endMonth, endYear, comments }) => {
+const SearchResult = ({ rating, entry_date, position, company, startMonth, startYear, endMonth, endYear, comments }) => {
 
     return (
         <div className="card-container">
             <div className="card-header">
                 <div className="card-header--container">
-                    <h4 className="card-header-stars">Placeholder for stars</h4>
-                    <p>Date placeholder</p>
+                    <div className="card-header-stars">
+                        <RatingStars rating={rating} />
+                    </div>
+                    <p>{entry_date}</p>
                 </div>
             </div>
             <div className="position-header">

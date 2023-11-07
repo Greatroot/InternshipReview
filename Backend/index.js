@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const mysql = require('mysql')
 const cors = require('cors')
-const PORT = process.env.PORT || 3306;
+// const PORT = process.env.PORT || 3306;
+const PORT = 3001;
 
 require('dotenv').config();
 
@@ -16,25 +17,29 @@ var corsOptions = {
 
 // access to the database - update it the new database
 const db = mysql.createConnection({
-    user: login.env.user,
-    host: login.env.host,
-    password: login.env.password,
-    database: login.env.database,
+    // user: login.env.user,
+    // host: login.env.host,
+    // password: login.env.password,
+    // database: login.env.database,
+    user: 'root',
+    host: 'localhost',
+    password: 'password',
+    database: 'internshipreview',
 });
 
-app.get("/", (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*")
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Max-Age", "1800");
-    res.setHeader("Access-Control-Allow-Headers", "content-type");
-    res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" );
-    }
-);
-
-var corsOptions = {
-    origin: 'http://localhost:3000', //change this to actual website
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+// app.get("/", (req, res) => {
+//     res.setHeader("Access-Control-Allow-Origin", "*")
+//     res.setHeader("Access-Control-Allow-Credentials", "true");
+//     res.setHeader("Access-Control-Max-Age", "1800");
+//     res.setHeader("Access-Control-Allow-Headers", "content-type");
+//     res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" );
+//     }
+// );
+//
+// var corsOptions = {
+//     origin: 'http://localhost:3000', //change this to actual website
+//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
 
 
 app.put('/update', (req, res) => {

@@ -102,7 +102,7 @@ const Results = ({ homeSearchTerm }) => {
                 return (
                     <div className="item" key={review.id}>
                         <SearchResult rating={review.rating}
-                            // date={}
+                                      entry_date={review.entry_date}
                                       position={review.position}
                                       company={review.company}
                                       startMonth={review.start_month}

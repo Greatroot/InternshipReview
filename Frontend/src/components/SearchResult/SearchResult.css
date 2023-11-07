@@ -31,8 +31,11 @@
     font-size: 14px;
 }
 
-.card-stars {
-
+.card-header-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .position-header {
